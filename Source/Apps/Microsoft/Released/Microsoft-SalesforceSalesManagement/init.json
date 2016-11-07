@@ -33,10 +33,10 @@
         "sqlInstance": "SalesforceDB",
         "newSqlDatabase": "$(this.MS.UtilityService.GetUniqueId(10))"
       },
-      {
-        "name": "customize.html",
-        "displayname": "Customize"
-      },
+      //{
+      //  "name": "customize.html",
+      //  "displayname": "Customize"
+      //},
       {
         "name": "$SiteCommon$/pagesgallery/summary.html",
         "displayname": "Summary"
