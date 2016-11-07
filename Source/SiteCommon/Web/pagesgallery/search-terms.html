@@ -1,0 +1,18 @@
+﻿<template>
+    <h1 class="st-title">Customize your search terms</h1>
+    <p class="st-subtitle">
+        Input the search terms you want to track. We will collect all tweets that match your search criteria. 
+        We can track hashtags, Twitter handles, plain text and more. For example,
+        if you are interested in tweets that mention Azure or the Power BI Twitter handle, you would put: @MSPowerBI OR Azure. </p>
+      <p>Check out the <a href="https://dev.twitter.com/rest/public/search" target="_blank">Twitter search query guidelines</a> for more details.
+    </p>
+
+    <div class="st-float">
+        <p class="st-text">Search Query:</p>
+        <input class="st-input" type="text" placeholder="@MSPowerBI OR Azure OR &quot;Stream Analytics&quot;" change.delegate="viewmodel.Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="viewmodel.searchQuery" />
+    </div>
+
+    <p class="st-float">
+        <button class="primary" click.delegate="viewmodel.OnValidate()" if.bind="!MS.HttpService.isServiceBusy">Validate</button>
+    </p>
+</template>

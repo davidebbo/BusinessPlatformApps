@@ -1,0 +1,86 @@
+﻿<template>
+    <h1 class="st-title">${title}</h1>
+    <p class="st-subtitle">${subtitle}</p>
+
+    <div if.bind="showNewSqlOption">
+        <p class="st-question st-text">Would you like us to provision a new Azure SQL instance or use an existing SQL instance?</p>
+        <select class="btn btn-default dropdown-toggle st-input" disabled.bind="MS.HttpService.isServiceBusy" value.bind="sqlInstance">
+            <option value="ExistingSql">Existing SQL Instance</option>
+            <option value="NewSql">New Azure SQL Instance</option>
+        </select>
+    </div>
+
+    <div if.bind="sqlInstance == 'ExistingSql'">
+        <div class="st-float">
+            <p class="st-text">Server Name:</p>
+            <input class="st-input" type="text" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="sqlServer" />
+            <span if.bind="isAzureSql">${azureSqlSuffix}</span>
+        </div>
+
+        <div class="st-label-wrapper" if.bind="showAzureSql">
+            <label class="st-label">
+                <input type="checkbox" tabindex="-1" checked.bind="isAzureSql" disabled.bind="MS.HttpService.isServiceBusy">
+                <span class="smallFontSize">Using Azure SQL?</span>
+            </label>
+        </div>
+
+        <div class="st-float" if.bind="!isAzureSql && !hideSqlAuth">
+            <p class="st-text">
+                <span>Authentication: </span>
+                <span class="glyphicon pbi-glyph-info glyph-mini st-tooltip" title="This option will impersonate the previously chosen Windows user" if.bind="auth == 'Windows' && MS.UtilityService.UseImpersonation()"></span>
+            </p>
+            <select class="btn btn-default dropdown-toggle st-input" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="auth">
+                <option>Windows</option>
+                <option>SQL Server</option>
+            </select>
+        </div>
+
+
+        <div class="st-float" if.bind="!isWindowsAuth || showCredsWhenWindowsAuth || isAzureSql">
+            <p class="st-text" if.bind="!logInAsCurrentUser">
+                <span if.bind="showCredsWhenWindowsAuth">Windows Username: </span>
+                <span class="glyphicon pbi-glyph-info glyph-mini st-tooltip" title="Must be in <domain>\<username> or <machinename>\<username> format" if.bind="showCredsWhenWindowsAuth"></span>
+                <span if.bind="!showCredsWhenWindowsAuth">SQL Username:</span>
+            </p>
+            <input class="st-input" type="text" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" if.bind="!logInAsCurrentUser" value.bind="username" />
+            <p class="st-text">
+                <span>Password: </span>
+                <span class="glyphicon pbi-glyph-info glyph-mini st-tooltip" title="The password for the chosen windows account. This is required to pull data in an unattended mode." if.bind="showCredsWhenWindowsAuth"></span>
+            </p>
+            <input class="st-input" type="password" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="password" />
+            <p>
+        </div>
+
+        <p class="st-float">
+            <button class="primary" click.delegate="OnValidate()" if.bind="!MS.HttpService.isServiceBusy">Validate</button>
+        </p>
+    </div>
+
+    <div if.bind="sqlInstance == 'NewSql'">
+        <p class="st-question st-text">We will create a Standard Azure instance inside your Azure Subscription.</p>
+
+        <div class="st-float">
+            <p class="st-text">Server Name:</p>
+            <input class="st-input" type="text" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="sqlServer" />
+            <span>${azureSqlSuffix}</span>
+            <p class="st-text">SQL Username:</p>
+            <input class="st-input" type="text" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="username" />
+            <p class="st-text">
+                <span>Password: </span>
+                <span class="glyphicon pbi-glyph-info glyph-mini st-tooltip" title="Password must be at least eight characters including one uppercase letter, one special character and one number."></span>
+            </p>
+            <input class="st-input" type="password" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="password" />
+            <p class="st-text">Password Confirmation:</p>
+            <input class="st-input" type="password" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="passwordConfirmation" />
+        </div>
+
+        <p class="st-float"><button class="primary" click.delegate="OnValidate()" if.bind="!MS.HttpService.isServiceBusy">Check Availability</button></p>
+    </div>
+
+    <div class="st-float" if.bind="showDatabases">
+        <p>Database:</p>
+        <select class="btn btn-default dropdown-toggle st-input" disabled.bind="MS.HttpService.isServiceBusy" value.bind="database">
+            <option repeat.for="database of databases">${database}</option>
+        </select>
+    </div>
+</template>

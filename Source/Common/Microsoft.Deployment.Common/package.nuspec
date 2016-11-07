@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>Microsoft.Deployment.Common</id>
+        <version>1.0.0-dev</version>
+        <title>
+            Microsoft Business Platform Common
+        </title>
+        <!--*-->
+        <authors>Microsoft Business Platform Team</authors>
+        <owners>Microsoft</owners>
+        <!--
+            <licenseUrl></licenseUrl>
+            <projectUrl></projectUrl>
+            <iconUrl></iconUrl>
+        -->
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <!--*-->
+        <description>The Microsoft Business Platform Common library which contains all the utils needed to build actions</description>
+        <!--*-->
+        <releaseNotes>Initial Version</releaseNotes>
+        <copyright>Microsoft Corporation 2016</copyright>
+        <tags>
+        </tags>
+        <dependencies>
+            <group targetFramework="net452">
+                <dependency id="Microsoft.ApplicationInsights" version="2.1.0" />
+                <dependency id="Newtonsoft.Json" version="9.0.1" />
+                <dependency id="NuGet.CommandLine" version="3.4.3" />
+            </group>
+        </dependencies>
+    </metadata>
+</package>

@@ -1,0 +1,27 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+
+*.nupkg
+/Source/**/bin/**/*
+/Source/**/obj/**/*
+/Source/**/packages/**/*
+/Source/Actions/*/scripts/**/*
+/Source/Commomn/*/scripts/**/*
+/Source/Actions/Microsoft.Deployment.Actions.Test/StyleCop.Cache
+/Source/Actions/Microsoft.Deployment.Actions.SQL/StyleCop.Cache
+/Source/Actions/Microsoft.Deployment.Actions.OnPremise/StyleCop.Cache
+/Source/Actions/Microsoft.Deployment.Actions.Custom/StyleCop.Cache
+/Source/Actions/Microsoft.Deployment.Actions.Common/StyleCop.Cache
+/Source/Actions/Microsoft.Deployment.Actions.AzureCustom/StyleCop.Cache
+/Source/Actions/Microsoft.Deployment.Actions.ADF/StyleCop.Cache
+*.suo
+**/*/.vs/**/*
+**/*/jspm_packages/**/*
+/Source/Site/Microsoft.Deployment.Site.Web/node_modules
+/Source/Site/Microsoft.Deployment.Site.Web/wwwroot/dist
+*.coverage
+/Source/Actions/.vs/config/applicationhost.config
+/Source/Apps/Microsoft/Released/Microsoft-SCCMTemplate/Resources/SCCM_Sample.pbix
+*.dg

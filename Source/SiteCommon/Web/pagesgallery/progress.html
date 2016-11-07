@@ -1,0 +1,63 @@
+﻿<template>
+    <h1 class="st-title">Track your progress</h1>
+    <p class="st-subtitle">This might take a while. We'll show you progress while you wait. Please don't close the browser until all the steps are completed. The setup could take 10-15 minutes.</p>
+
+    <!-- Progress -->
+    <div class="st-float st-text st-text-progress">
+        
+        <!-- Base Experience -->
+        <div class="st-progress" if.bind="(showCounts && !MS.DeploymentService.isFinished) || !showCounts" repeat.for="action of MS.DeploymentService.actions">
+            <span class="glyphicon pbi-glyph-circlering st-icon-progress"></span>
+            <span class="powervisuals-glyph checkmark st-icon-progress st-icon-progress-check" if.bind="MS.DeploymentService.executingIndex > $index"></span>
+            <span class="glyphicon pbi-glyph-close st-icon-progress st-icon-progress-close" if.bind="MS.DeploymentService.hasError && MS.DeploymentService.executingIndex == $index"></span>
+            <span class="st-loader st-loader-tiny st-tracking" if.bind="!MS.DeploymentService.hasError && MS.DeploymentService.executingIndex == $index"></span>
+            <span class="st-icon-progress ${$index + 1 < 10 ? 'st-icon-progress-index' : 'st-icon-progress-index-large'}" if.bind="MS.DeploymentService.executingIndex < $index">${$index + 1}</span>
+            <span class="semiboldFont st-progress-text">${action.DisplayName}</span>
+            <span class="smallFontSize" if.bind="MS.DeploymentService.message && MS.DeploymentService.executingIndex == $index">(${MS.DeploymentService.message})</span>
+        </div>
+        <div class="st-progress" if.bind="MS.DeploymentService.isFinished && !MS.DeploymentService.hasError">
+            <span class="glyphicon pbi-glyph-circlering st-icon-progress"></span>
+            <span class="powervisuals-glyph checkmark st-icon-progress st-icon-progress-check"></span>
+            <span class="semiboldFont st-progress-text">${successMessage}</span>
+        </div>
+
+        
+        
+        
+        <!-- Get Status -->
+        <ul class="smallFontSize st-tabs" if.bind="recordCounts && recordCounts.length > 0 && !MS.DeploymentService.hasError">
+            <li class="st-import" repeat.for="recordCount of recordCounts">
+                <span class="glyphicon glyph-small pbi-glyph-circlering st-icon st-loader-check" if.bind="isDataPullDone"></span>
+                <span class="powervisuals-glyph checkmark st-icon st-icon-checkmark st-loader-check" if.bind="isDataPullDone"></span>
+                <span class="st-loader st-loader-tiny st-loader-line" if.bind="!isDataPullDone"></span>
+                <span>${recordCount.EntityName} (${recordCount.Count} <span if.bind="recordCount.Count==1">Row</span><span if.bind="recordCount.Count!=1">Rows</span>)</span>
+            </li>
+        </ul>
+        
+
+        <!-- Get Slice Status -->
+        <ul class="smallFontSize st-tabs" if.bind="sliceStatus && sliceStatus.length > 0 && !MS.DeploymentService.hasError">
+            <li class="st-import" repeat.for="slice of sliceStatus">
+                <span class="glyphicon glyph-small pbi-glyph-circlering st-icon st-loader-check" if.bind="isDataPullDone"></span>
+                <span class="powervisuals-glyph checkmark st-icon st-icon-checkmark st-loader-check" if.bind="isDataPullDone"></span>
+                <span class="st-loader st-loader-tiny st-loader-line" if.bind="!isDataPullDone"></span>
+                <span>${slice.Dataset} (${slice.Status})</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- PBIX Download -->
+    <div class="st-float" if.bind="MS.DeploymentService.isFinished && !MS.DeploymentService.hasError">
+        <p class="smallFontSize" if.bind="isPbixReady">
+            <a href.bind="pbixDownloadLink" target="${MS.HttpService.isOnPremise ? '_self' : '_blank'}">
+                <button class="primary">Download PBIX</button>
+            </a>
+        </p>
+        <div class="smallFontSize" if.bind="!isPbixReady">
+            <span class="st-loader st-loader-tiny st-loader-pbi"></span>
+            <span>Getting your Power BI file ready...</span>
+        </div>
+    </div>
+    
+
+</template>

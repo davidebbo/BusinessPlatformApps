@@ -1,0 +1,64 @@
+﻿<template>
+    <h1 class="st-title">Connect to Azure</h1>
+    <p class="st-subtitle">
+        To create the solution we will be using a number of Azure Services which require an Azure subscription.
+        Don't worry if you don't have one, you can get started with a free
+        <a href="https://azure.microsoft.com/en-us/free/" target="_blank">Azure subscription trial</a>.
+    </p>
+
+    <div if.bind="isActivated && !isValidated && !showPricingConfirmation">
+        <p class="st-text">Would you like to connect to Azure through an organizational account or a Microsoft account?</p>
+        <div class="st-float">
+            <select class="btn btn-default dropdown-toggle st-input" disabled.bind="MS.HttpService.isServiceBusy" value.bind="connectionType">
+                <option value.bind="azureConnection.Organizational">Organizational Account (Work or School)</option>
+                <option value.bind="azureConnection.Microsoft">Microsoft Account (Hotmail, Outlook, etc.)</option>
+            </select>
+        </div>
+
+        <div class="st-float" if.bind="connectionType == azureConnection.Microsoft">
+            <p class="st-text">
+                In order to connect to your Microsoft account we will need to know your Azure directory.
+                To figure this out please refer to our <a href="http://community.powerbi.com/t5/Power-BI-Solution-Templates/Guide-for-using-Microsoft-accounts-with-Twitter-template/m-p/60088#M31" target="_blank">guide</a>.
+            </p>
+            <p class="st-text">Azure Directory:</p>
+            <input class="st-input" placeholder="directoryname.onmicrosoft.com" type="text" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="azureDirectory" />
+        </div>
+
+        <div class="st-float">
+            <button class="primary" click.delegate="connect()" disabled.bind="MS.HttpService.isServiceBusy">Connect to Azure</button>
+        </div>
+    </div>
+
+    <div class="st-float" if.bind="subscriptionsList && subscriptionsList.length > 0">
+        <select class="btn btn-default dropdown-toggle st-input" disabled.bind="MS.HttpService.isServiceBusy" if.bind="isActivated && showPricingConfirmation" value.bind="selectedSubscriptionId">
+            <option repeat.for="item of subscriptionsList" value.bind="item.SubscriptionId">${item.DisplayName}</option>
+        </select>
+    </div>
+
+    <div class="st-float" if.bind="!MS.HttpService.isServiceBusy && showPricingConfirmation">
+        <p class="st-float st-text" click.trigger="showAdvanced = !showAdvanced">
+            <span class="glyphicon pbi-glyph-circlering glyph-small st-toggle" if.bind="showAdvanced"></span>
+            <span class="st-toggle-collapse" if.bind="showAdvanced">-</span>
+            <span class="glyphicon pbi-glyph-addcircle glyph-small st-toggle" if.bind="!showAdvanced"></span>
+            <span>Advanced (optional)</span>
+        </p>
+        <div class="st-float" if.bind="showAdvanced">
+            <p class="st-text">Azure Resource Group Name:</p>
+            <input class="st-input" type="text" disabled.bind="MS.HttpService.isServiceBusy" value.bind="selectedResourceGroup" />
+        </div>
+    </div>
+    <!-- Pricing Confirmation -->
+    <div>
+        <div if.bind="showPricingConfirmation">
+            <label class="st-float st-text">
+                <input type="checkbox" tabindex="-1" change.delegate="verifyPricing()" checked.bind="isPricingChecked" disabled.bind="MS.HttpService.isServiceBusy">
+                <span class="st-text">
+                    ${pricingCost}
+                </span>
+            </label>
+            <p class="st-float st-text">
+                You can learn more about pricing <a href="${pricingUrl}" target="_blank">here</a>.
+            </p>
+        </div>
+    </div>
+</template>

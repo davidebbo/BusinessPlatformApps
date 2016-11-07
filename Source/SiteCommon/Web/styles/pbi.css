@@ -1,0 +1,2527 @@
+﻿/*
+ *  Power BI Colors
+ *
+ *  Copyright (c) Microsoft Corporation
+ *  All rights reserved.
+ *  MIT License
+ *
+ *  Permission is hereby granted, free of charge, to any person obtaining a copy
+ *  of this software and associated documentation files (the ""Software""), to deal
+ *  in the Software without restriction, including without limitation the rights
+ *  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *  copies of the Software, and to permit persons to whom the Software is
+ *  furnished to do so, subject to the following conditions:
+ *
+ *  The above copyright notice and this permission notice shall be included in
+ *  all copies or substantial portions of the Software.
+ *
+ *  THE SOFTWARE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ *  THE SOFTWARE.
+ */
+/* THEME COLORS */
+/* NEUTRAL COLORS */
+/* ACCENT COLORS */
+/* APPLICATION CHROME COLORS */
+/*dark chrome*/
+/*
+    DEPRECATED COLORS: Please refrain from adding one time use colors to the section below.
+    These will be all be removed. New colors must be provided by design and be in the design OneNote palette
+*/
+/* PowerView specific colors */
+/* Visual colors */
+/*
+ *  Power BI Colors
+ *
+ *  Copyright (c) Microsoft Corporation
+ *  All rights reserved. 
+ *  MIT License
+ *
+ *  Permission is hereby granted, free of charge, to any person obtaining a copy
+ *  of this software and associated documentation files (the ""Software""), to deal
+ *  in the Software without restriction, including without limitation the rights
+ *  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *  copies of the Software, and to permit persons to whom the Software is
+ *  furnished to do so, subject to the following conditions:
+ *   
+ *  The above copyright notice and this permission notice shall be included in 
+ *  all copies or substantial portions of the Software.
+ *   
+ *  THE SOFTWARE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+ *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+ *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+ *  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+ *  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ *  THE SOFTWARE.
+ */
+/* THEME COLORS */
+/* ACCENT COLORS */
+/*
+ *  Power BI Visualizations
+ *
+ *  Copyright (c) Microsoft Corporation
+ *  All rights reserved.
+ *  MIT License
+ *
+ *  Permission is hereby granted, free of charge, to any person obtaining a copy
+ *  of this software and associated documentation files (the ""Software""), to deal
+ *  in the Software without restriction, including without limitation the rights
+ *  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *  copies of the Software, and to permit persons to whom the Software is
+ *  furnished to do so, subject to the following conditions:
+ *
+ *  The above copyright notice and this permission notice shall be included in
+ *  all copies or substantial portions of the Software.
+ *
+ *  THE SOFTWARE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ *  THE SOFTWARE.
+ */
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+.secondaryFont {
+    font-family: 'wf_standard-font', helvetica, arial, sans-serif;
+}
+
+.secondaryBoldFont {
+    font-family: 'wf_standard-font_bold', helvetica, arial, sans-serif;
+}
+
+.lightFont {
+    font-family: 'Segoe UI Light', 'wf_segoe-ui_light', helvetica, arial, sans-serif;
+}
+
+.semilightFont {
+    font-family: 'Segoe UI Semilight', 'wf_segoe-ui_semilight', helvetica, arial, sans-serif;
+}
+
+.regularFont {
+    font-family: 'Segoe UI', 'wf_segoe-ui_normal', helvetica, arial, sans-serif;
+}
+
+.semiboldFont {
+    font-family: 'Segoe UI Semibold', 'wf_segoe-ui_semibold', helvetica, arial, sans-serif;
+}
+
+.boldFontFamily {
+    font-family: 'Segoe UI Bold', 'wf_segoe-ui_bold', helvetica, arial, sans-serif;
+}
+
+.smallFontSize {
+    font-size: 12px;
+}
+
+.mediumFontSize {
+    font-size: 14px;
+}
+
+.largeFontSize {
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: 'wf_segoe-ui_light';
+    src: url('../fonts/SegoeUI-Light-final.eot');
+    src: local('Segoe UI Light'),local('Segoe WP Light'), url('../fonts/SegoeUI-Light-final.eot?#iefix') format('embedded-opentype'),url('../fonts/SegoeUI-Light-final.woff') format('woff'),url('../fonts/SegoeUI-Light-final.ttf') format('truetype'),url('../fonts/SegoeUI-Light-final.svg#web') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'wf_segoe-ui_semilight';
+    src: url('../fonts/SegoeUI-SemiLight-final.eot');
+    src: local('Segoe UI Semilight'),local('Segoe WP Light'),url('../fonts/SegoeUI-SemiLight-final.eot?#iefix') format('embedded-opentype'),url('../fonts/SegoeUI-SemiLight-final.woff') format('woff'),url('../fonts/SegoeUI-SemiLight-final.ttf') format('truetype'),url('../fonts/SegoeUI-SemiLight-final.svg#web') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'wf_segoe-ui_normal';
+    src: url('../fonts/SegoeUI-Regular-final.eot');
+    src: local('Segoe UI'),local('Segoe'),local('Segoe WP'),url('../fonts/SegoeUI-Regular-final.eot?#iefix') format('embedded-opentype'),url('../fonts/SegoeUI-Regular-final.woff') format('woff'),url('../fonts/SegoeUI-Regular-final.ttf') format('truetype'),url('../fonts/SegoeUI-Regular-final.svg#web') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'wf_segoe-ui_semibold';
+    src: url('../fonts/SegoeUI-SemiBold-final.eot');
+    src: local('Segoe UI Semibold'),local('Segoe Semibold'),local('Segoe WP Semibold'),url('../fonts/SegoeUI-SemiBold-final.eot?#iefix') format('embedded-opentype'),url('../fonts/SegoeUI-SemiBold-final.woff') format('woff'),url('../fonts/SegoeUI-SemiBold-final.ttf') format('truetype'),url('../fonts/SegoeUI-SemiBold-final.svg#web') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'wf_segoe-ui_bold';
+    src: url('../fonts/SegoeUI-Bold-final.eot');
+    src: local('Segoe UI bold'),local('Segoe bold'),local('Segoe WP bold'),url('../fonts/SegoeUI-Bold-final.eot?#iefix') format('embedded-opentype'),url('../fonts/SegoeUI-Bold-final.woff') format('woff'),url('../fonts/SegoeUI-Bold-final.ttf') format('truetype'),url('../fonts/SegoeUI-Bold-final.svg#web') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'wf_standard-font';
+    src: url('../fonts/StandardFont.eot');
+    src: url('../fonts/StandardFont.eot?#iefix') format('embedded-opentype'),url('../fonts/StandardFont.woff') format('woff'),url('../fonts/StandardFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'wf_standard-font_bold';
+    src: url('../fonts/StandardFontBold.eot');
+    src: url('../fonts/StandardFontBold.eot?#iefix') format('embedded-opentype'),url('../fonts/StandardFontBold.woff') format('woff'),url('../fonts/StandardFontBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'wf_standard-font_light';
+    src: url('../fonts/StandardFontLight.eot');
+    src: url('../fonts/StandardFontLight.eot?#iefix') format('embedded-opentype'),url('../fonts/StandardFontLight.woff') format('woff'),url('../fonts/StandardFontLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PowrMDL2';
+    src: url('../fonts/PowrMDL2.eot');
+    src: url('../fonts/PowrMDL2.eot?#iefix') format('embedded-opentype'),url('../fonts/PowrMDL2.woff') format('woff'),url('../fonts/PowrMDL2.ttf') format('truetype'),url('../fonts/PowrMDL2.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.glyphicon {
+    font-family: 'PowrMDL2';
+    font-style: normal;
+    font-size: 32px;
+    display: inline-block;
+}
+
+.glyph-micro {
+    font-size: 8px;
+}
+
+.glyph-mini {
+    font-size: 12px;
+}
+
+.glyph-small {
+    font-size: 16px;
+}
+
+.glyph-med {
+    font-size: 32px;
+}
+
+.glyph-large {
+    font-size: 48px;
+}
+
+.pbi-glyph-chevrondownmedium::before {
+    content: "\E972";
+}
+
+.pbi-glyph-chevronupmedium::before {
+    content: "\E971";
+}
+
+.pbi-glyph-caretdownright::before {
+    content: "\E818";
+}
+
+.pbi-glyph-share:before {
+    content: "\E72D";
+}
+
+.pbi-glyph-save:before {
+    content: "\E74E";
+}
+
+.pbi-glyph-saveas:before {
+    content: "\E792";
+}
+
+.pbi-glyph-financial:before {
+    content: "\E7BB";
+}
+
+.pbi-glyph-edit:before {
+    content: "\E70F";
+}
+
+.pbi-glyph-emi:before {
+    content: "\E731";
+}
+
+.pbi-glyph-checkboxcomposite:before {
+    content: "\E73A";
+}
+
+.pbi-glyph-checkmark:before {
+    content: "\E73E";
+}
+
+.pbi-glyph-page2:before {
+    content: "\E7C3";
+}
+
+.pbi-glyph-folder:before {
+    content: "\E8B7";
+}
+
+.pbi-glyph-link:before {
+    content: "\E71B";
+}
+
+.pbi-glyph-group:before {
+    content: "\E902";
+}
+
+.pbi-glyph-paste:before {
+    content: "\E77F";
+}
+
+.pbi-glyph-emoji:before {
+    content: "\E76E";
+}
+
+.pbi-glyph-upload:before {
+    content: "\E898";
+}
+
+.pbi-glyph-pc1:before {
+    content: "\E977";
+}
+
+.pbi-glyph-add:before {
+    content: "\E710";
+}
+
+.pbi-glyph-search:before {
+    content: "\E721";
+}
+
+.pbi-glyph-globalnavbutton:before {
+    content: "\E700";
+}
+
+.pbi-glyph-pageright:before {
+    content: "\E761";
+}
+
+.pbi-glyph-pageleft:before {
+    content: "\E760";
+}
+
+.pbi-glyph-tvmonitor:before {
+    content: "\E7F4";
+}
+
+.pbi-glyph-chromerestore:before {
+    content: "\E923";
+}
+
+.pbi-glyph-world:before {
+    content: "\E128";
+}
+
+.pbi-glyph-repairlegacy:before {
+    content: "\E15E";
+}
+
+.pbi-glyph-more:before {
+    content: "\E712";
+}
+
+.pbi-glyph-slideshow:before {
+    content: "\E786";
+}
+
+.pbi-glyph-photo:before {
+    content: "\E91B";
+}
+
+.pbi-glyph-calendar:before {
+    content: "\E787";
+}
+
+.pbi-glyph-favoritestar:before {
+    content: "\E734";
+}
+
+.pbi-glyph-collection:before {
+    content: "\E7AA";
+}
+
+.pbi-glyph-chromefullscreen:before {
+    content: "\E92D";
+}
+
+.pbi-glyph-undo:before {
+    content: "\E7A7";
+}
+
+.pbi-glyph-back:before {
+    content: "\E72B";
+}
+
+.pbi-glyph-font:before {
+    content: "\E8D2";
+}
+
+.pbi-glyph-flickup:before {
+    content: "\E936";
+}
+
+.pbi-glyph-chromeminimize:before {
+    content: "\E921";
+}
+
+.pbi-glyph-gripperbarhorizontal:before {
+    content: "\E76F";
+}
+
+.pbi-glyph-barchart:before {
+    content: "\EAE7";
+}
+
+.pbi-glyph-gauge:before {
+    content: "\EB24";
+}
+
+.pbi-glyph-warning:before {
+    content: "\E7BA";
+}
+
+.pbi-glyph-error:before {
+    content: "\EA39";
+}
+
+.pbi-glyph-success:before {
+    content: "\E73E";
+}
+
+.pbi-glyph-settings:before {
+    content: "\E713";
+}
+
+.pbi-glyph-globe:before {
+    content: "\E774";
+}
+
+.pbi-glyph-repair:before {
+    content: "\E90F";
+}
+
+.pbi-glyph-emi:before {
+    content: "\E731";
+}
+
+.pbi-glyph-info:before {
+    content: "\E946";
+}
+
+.pbi-glyph-go:before {
+    content: "\E8AD";
+}
+
+.pbi-glyph-blockedsite:before {
+    content: "\E72F";
+}
+
+.pbi-glyph-close:before {
+    content: "\E8BB";
+}
+
+.pbi-glyph-circlefill:before {
+    content: "\EA3B";
+}
+
+.pbi-glyph-circlering:before {
+    content: "\EA3A";
+}
+
+.pbi-glyph-pinned:before {
+    content: "\E840";
+}
+
+.pbi-glyph-pinnedfill:before {
+    content: "\E842";
+}
+
+.pbi-glyph-unpin:before {
+    content: "\E77A";
+}
+
+.pbi-glyph-excel:before {
+    content: "\EC28";
+}
+
+.pbi-glyph-flag:before {
+    content: "\E7C1";
+}
+
+.pbi-glyph-library:before {
+    content: "\E8F1";
+}
+
+.pbi-glyph-mail:before {
+    content: "\E715";
+}
+
+.pbi-glyph-lock:before {
+    content: "\E72E";
+}
+
+.pbi-glyph-piedouble:before {
+    content: "\EB04";
+}
+
+.pbi-glyph-rewind:before {
+    content: "\EB9E";
+}
+
+.pbi-glyph-asterisk:before {
+    content: "\EA38";
+}
+
+.pbi-glyph-comment:before {
+    content: "\E90A";
+}
+
+.pbi-glyph-checkbox:before {
+    content: "\E739";
+}
+
+.pbi-glyph-checkboxfill:before {
+    content: "\E73B";
+}
+
+.pbi-glyph-checkboxindeterminate:before {
+    content: "\E73C";
+}
+
+.pbi-glyph-checkboxreversed:before {
+    content: "\E73D";
+}
+
+.pbi-glyph-inserttextbox:before {
+    content: "\EC7D";
+}
+
+.pbi-glyph-toggle:before {
+    content: "\EC12";
+}
+
+.pbi-glyph-togglefilled:before {
+    content: "\EC11";
+}
+
+.pbi-glyph-delete:before {
+    content: "\E74D";
+}
+
+.pbi-glyph-refresh:before {
+    content: "\E72C";
+}
+
+.pbi-glyph-miniexpand:before {
+    content: "\E93A";
+}
+
+.pbi-glyph-minicontract:before {
+    content: "\E93B";
+}
+
+.pbi-glyph-waffle:before {
+    content: "\E001";
+}
+
+.pbi-glyph-filter:before {
+    content: "\E100";
+}
+
+.pbi-glyph-filterfilled:before {
+    content: "\E101";
+}
+
+.pbi-glyph-visualsinteraction:before {
+    content: "\E102";
+}
+
+.pbi-glyph-crosshighlight:before {
+    content: "\E103";
+}
+
+.pbi-glyph-crosshighlightfilled:before {
+    content: "\E104";
+}
+
+.pbi-glyph-disable:before {
+    content: "\E105";
+}
+
+.pbi-glyph-disablefilled:before {
+    content: "\E107";
+}
+
+.pbi-glyph-export:before {
+    content: "\E106";
+}
+
+.pbi-glyph-iframe:before {
+    content: "\E108";
+}
+
+.pbi-glyph-addcircle:before {
+    content: "\E113";
+}
+
+.pbi-glyph-fullscreen:before {
+    content: "\E110";
+}
+
+.pbi-glyph-fullscreenexit:before {
+    content: "\E111";
+}
+
+.pbi-glyph-fittopage:before {
+    content: "\E109";
+}
+
+.pbi-glyph-code:before {
+    content: "\ECCE";
+}
+
+.pbi-glyph-zorder:before {
+    content: "\E114";
+}
+
+.pbi-glyph-visualinteraction:before {
+    content: "\E115";
+}
+
+.pbi-glyph-alignment:before {
+    content: "\E116";
+}
+
+.pbi-glyph-shapes:before {
+    content: "\EC7C";
+}
+
+.pbi-glyph-attachment:before {
+    content: "\E118";
+}
+
+.pbi-glyph-securityalert:before {
+    content: "\E117";
+}
+
+.pbi-glyph-bold:before {
+    content: "\E8DD";
+}
+
+.pbi-glyph-italics:before {
+    content: "\E8DB";
+}
+
+.pbi-glyph-underline:before {
+    content: "\E8DC";
+}
+
+.pbi-glyph-rectangle:before {
+    content: "\E119";
+}
+
+.pbi-glyph-oval:before {
+    content: "\E120";
+}
+
+.pbi-glyph-line:before {
+    content: "\E121";
+}
+
+.pbi-glyph-triangle:before {
+    content: "\E122";
+}
+
+.pbi-glyph-arrow:before {
+    content: "\E123";
+}
+
+.pbi-glyph-image:before {
+    content: "\E124";
+}
+
+.pbi-glyph-alignleft:before {
+    content: "\E8E4";
+}
+
+.pbi-glyph-aligncenter:before {
+    content: "\E8E3";
+}
+
+.pbi-glyph-alignright:before {
+    content: "\E8E2";
+}
+
+.pbi-glyph-qrcode:before {
+    content: "\ED14";
+}
+
+.pbi-glyph-powerbi:before {
+    content: "\E000";
+}
+
+.pbi-glyph-gear:before {
+    content: "\E002";
+}
+
+.pbi-glyph-download:before {
+    content: "\E003";
+}
+
+.pbi-glyph-smiley:before {
+    content: "\E005";
+}
+
+.pbi-glyph-question:before {
+    content: "\E004";
+}
+
+.pbi-glyph-tile:before {
+    content: "\E006";
+}
+
+.pbi-glyph-rlogo:before {
+    content: "\E125";
+}
+
+.pbi-glyph-play:before {
+    content: "\EB1C";
+}
+
+.pbi-glyph-stop:before {
+    content: "\EA6F";
+}
+
+.pbi-glyph-excelcloud:before {
+    content: "\EC29";
+}
+
+.pbi-glyph-importvisual:before {
+    content: "\E8B5";
+}
+
+.pbi-glyph-sharepoint:before {
+    content: "\ED18";
+}
+
+.pbi-glyph-print:before {
+    content: "\E2F6";
+}
+
+.pbi-glyph-stackedbar:before {
+    content: "\E126";
+}
+
+.pbi-glyph-stackedcolumn:before {
+    content: "\E127";
+}
+
+.pbi-glyph-areachart:before {
+    content: "\E128";
+}
+
+.pbi-glyph-piechart:before {
+    content: "\E129";
+}
+
+.pbi-glyph-fullstackedbar:before {
+    content: "\E130";
+}
+
+.pbi-glyph-linechart:before {
+    content: "\E131";
+}
+
+.pbi-glyph-scatter:before {
+    content: "\E132";
+}
+
+.pbi-glyph-funnel:before {
+    content: "\E133";
+}
+
+.pbi-glyph-dataset:before {
+    content: "\E138";
+}
+
+.pbi-glyph-publishtoweb:before {
+    content: "\E134";
+}
+
+.pbi-glyph-database:before {
+    content: "\EC8C";
+}
+
+.pbi-glyph-drilltodetail:before {
+    content: "\E140";
+}
+
+.pbi-glyph-seedata:before {
+    content: "\E139";
+}
+
+.pbi-glyph-move:before {
+    content: "\E135";
+}
+
+.pbi-glyph-home:before {
+    content: "\E10F";
+}
+
+.pbi-glyph-fittopage:before {
+    content: "\E109";
+}
+
+.pbi-glyph-rotatehorizontal:before {
+    content: "\E141";
+}
+
+.pbi-glyph-rotatevertical:before {
+    content: "\E142";
+}
+
+.pbi-glyph-download2:before {
+    content: "\E143";
+}
+
+.pbi-glyph-calculate:before {
+    content: "\E1D0";
+}
+
+.pbi-glyph-reload:before {
+    content: "\E248";
+}
+
+.pbi-glyph-insight:before {
+    content: "\EA80";
+}
+
+.pbi-glyph-nonetwork:before {
+    content: "\EB63";
+}
+
+.pbi-glyph-dynamic:before {
+    content: "\E144";
+}
+
+.pbi-glyph-fittopage:before {
+    content: "\E145";
+}
+
+.pbi-glyph-fittowidth:before {
+    content: "\E9A7";
+}
+
+.pbi-glyph-actualsize:before {
+    content: "\E146";
+}
+
+.pbi-glyph-favoritefilled:before {
+    content: "\E735";
+}
+
+.pbi-glyph-expand:before {
+    content: "\E147";
+}
+
+.pbi-glyph-drillup:before {
+    content: "\E148";
+}
+
+.pbi-glyph-drilldowndisabled:before {
+    content: "\E149";
+}
+
+.pbi-glyph-drilldownenabled:before {
+    content: "\E150";
+}
+
+.pbi-glyph-show:before {
+    content: "\E151";
+}
+
+.pbi-glyph-bell:before {
+    content: "\EA8F";
+}
+
+.pbi-glyph-atoz:before {
+    content: "\E152";
+}
+
+.pbi-glyph-ztoa:before {
+    content: "\E153";
+}
+
+.pbi-glyph-pin {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+    .pbi-glyph-pin:before {
+        content: "\E718";
+    }
+
+.pbi-glyph-caretright {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+    .pbi-glyph-caretright::before {
+        content: "\E818";
+    }
+
+.pbi-glyph-caretdown {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+    .pbi-glyph-caretdown::before {
+        content: "\E818";
+    }
+
+.pbi-glyph-caretleft {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+    .pbi-glyph-caretleft::before {
+        content: "\E818";
+    }
+
+.pbi-glyph-chevronrightmedium {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+}
+
+    .pbi-glyph-chevronrightmedium::before {
+        content: "\E972";
+    }
+
+.pbi-glyph-chevronleftmedium {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+
+    .pbi-glyph-chevronleftmedium::before {
+        content: "\E972";
+    }
+
+.pbi-glyph-uparrow {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+
+    .pbi-glyph-uparrow::before {
+        content: "\E72B";
+    }
+
+.pbi-glyph-rightarrow {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+    .pbi-glyph-rightarrow::before {
+        content: "\E72B";
+    }
+
+.pbi-glyph-uprightarrow {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+    .pbi-glyph-uprightarrow::before {
+        content: "\E72B";
+    }
+
+.pbi-glyph-getdata {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    font-weight: bold;
+}
+
+    .pbi-glyph-getdata::before {
+        content: "\E72B";
+    }
+
+.pbi-glyph-cancel {
+    font-weight: bold;
+}
+
+    .pbi-glyph-cancel::before {
+        content: "\E8BB";
+    }
+
+[dir='rtl'] .pbi-glyph-caretdownright {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+
+[dir='rtl'] .pbi-glyph-caretleft {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+[dir='rtl'] .pbi-glyph-caretright {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+[dir='rtl'] .pbi-glyph-chevronrightmedium {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+
+[dir='rtl'] .pbi-glyph-chevronleftmedium {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+}
+
+[dir='rtl'] .pbi-glyph-getdata {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+[dir='rtl'] .pbi-glyph-go {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+}
+
+[dir='rtl'] .pbi-glyph-pageright,
+[dir='rtl'] .pbi-glyph-pageleft,
+[dir='rtl'] .pbi-glyph-back,
+[dir='rtl'] .pbi-glyph-play,
+[dir='rtl'] .pbi-glyph-rewind {
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+}
+
+html:lang(ar) .pbi-glyph-question {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+}
+
+h1,
+.label-super {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+h2,
+.label-xxl {
+    font-size: 28px;
+}
+
+h3,
+.label-xl {
+    font-size: 24px;
+}
+
+h4,
+.label-lrg {
+    font-size: 16px;
+}
+
+h5,
+.label-med {
+    font-size: 14px;
+}
+
+h6,
+.label-small {
+    font-size: 12px;
+}
+
+h7,
+.label-xsmall {
+    font-size: 11px;
+}
+
+h8,
+.mini-label {
+    font-size: 10px;
+}
+/*
+ *  Power BI KPI Glyphs
+ *
+ *  Copyright (c) Microsoft Corporation
+ *  All rights reserved.
+ *  MIT License
+ *
+ *  Permission is hereby granted, free of charge, to any person obtaining a copy
+ *  of this software and associated documentation files (the ""Software""), to deal
+ *  in the Software without restriction, including without limitation the rights
+ *  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *  copies of the Software, and to permit persons to whom the Software is
+ *  furnished to do so, subject to the following conditions:
+ *
+ *  The above copyright notice and this permission notice shall be included in
+ *  all copies or substantial portions of the Software.
+ *
+ *  THE SOFTWARE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ *  THE SOFTWARE.
+ */
+/* KPI colors*/
+/* KPI Visual colors*/
+.kpi-green {
+    color: #79c75b;
+}
+
+.kpi-yellow {
+    color: #e8d62e;
+}
+
+.kpi-red {
+    color: #c0433a;
+}
+
+.kpi-visual-green {
+    color: #3bb44a;
+    fill: #3bb44a;
+}
+
+.kpi-visual-yellow {
+    color: #F2C811;
+    fill: #F2C811;
+}
+
+.kpi-visual-red {
+    color: #E81123;
+    fill: #E81123;
+}
+
+.kpi-visual-text-grey {
+    color: #212121;
+    fill: #212121;
+}
+
+.kpi-visual-graph-grey {
+    color: #5F6B6D;
+    fill: #5F6B6D;
+}
+
+@font-face {
+    font-family: 'PowerVisuals';
+    src: url('../fonts/PowerVisuals.eot?#iefix') format('embedded-opentype'),url('../fonts/PowerVisuals.woff') format('woff'),url('../fonts/PowerVisuals.ttf') format('truetype'),url('../fonts/PowerVisuals.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.powervisuals-glyph {
+    font-family: PowerVisuals;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    /** Necessary to allow absolute positioning of just ::after elements (i.e. stacks) */
+    position: relative;
+}
+
+    .powervisuals-glyph.slicer-clear::before {
+        content: '\E100';
+    }
+
+    .powervisuals-glyph.left-nav-arrow::before {
+        content: '\E101';
+    }
+
+    .powervisuals-glyph.right-nav-arrow::before {
+        content: '\E102';
+    }
+
+    .powervisuals-glyph.empty-checkbox::before {
+        content: '\E103';
+    }
+
+    .powervisuals-glyph.arrow-up::before {
+        content: '\E107';
+    }
+
+    .powervisuals-glyph.arrow-right-up::before {
+        content: '\E108';
+    }
+
+    .powervisuals-glyph.arrow-right::before {
+        content: '\E109';
+    }
+
+    .powervisuals-glyph.arrow-right-down::before {
+        content: '\E110';
+    }
+
+    .powervisuals-glyph.arrow-down::before {
+        content: '\E111';
+    }
+
+    .powervisuals-glyph.arrow-left-down::before {
+        content: '\E112';
+    }
+
+    .powervisuals-glyph.arrow-left::before {
+        content: '\E113';
+    }
+
+    .powervisuals-glyph.arrow-left-up::before {
+        content: '\E114';
+    }
+
+    .powervisuals-glyph.caret-up::before {
+        content: '\E115';
+    }
+
+    .powervisuals-glyph.caret-down::before {
+        content: '\E116';
+    }
+
+    .powervisuals-glyph.circle::before {
+        content: '\E700';
+    }
+
+    .powervisuals-glyph.flag::before {
+        content: '\E70D';
+    }
+
+    .powervisuals-glyph.circle-x::before {
+        content: '\E70E';
+    }
+
+    .powervisuals-glyph.circle-exclamation::before {
+        content: '\E70F';
+    }
+
+    .powervisuals-glyph.circle-checkmark::before {
+        content: '\E710';
+    }
+
+    .powervisuals-glyph.circle-small::before {
+        content: '\E712';
+    }
+
+    .powervisuals-glyph.square::before {
+        content: '\E713';
+    }
+
+    .powervisuals-glyph.x::before {
+        content: '\E714';
+    }
+
+    .powervisuals-glyph.exclamation::before {
+        content: '\E715';
+    }
+
+    .powervisuals-glyph.checkmark::before {
+        content: '\E718';
+    }
+
+    .powervisuals-glyph.rhombus::before {
+        content: '\E719';
+    }
+
+    .powervisuals-glyph.triangle::before {
+        content: '\E71B';
+    }
+
+    .powervisuals-glyph.star-empty::before {
+        content: '\E71C';
+    }
+
+    .powervisuals-glyph.star-half-full::before {
+        content: '\E721';
+    }
+
+    .powervisuals-glyph.star-full::before {
+        content: '\E724';
+    }
+
+    .powervisuals-glyph.bars-one::before {
+        content: '\E725';
+    }
+
+    .powervisuals-glyph.bars-two::before {
+        content: '\E726';
+    }
+
+    .powervisuals-glyph.bars-three::before {
+        content: '\E727';
+    }
+
+    .powervisuals-glyph.bars-four::before {
+        content: '\E728';
+    }
+
+    .powervisuals-glyph.bars-five::before {
+        content: '\E729';
+    }
+
+    .powervisuals-glyph.boxes-one::before {
+        content: '\E732';
+    }
+
+    .powervisuals-glyph.boxes-two::before {
+        content: '\E733';
+    }
+
+    .powervisuals-glyph.boxes-three::before {
+        content: '\E731';
+    }
+
+    .powervisuals-glyph.boxes-four::before {
+        content: '\E730';
+    }
+
+    .powervisuals-glyph.circle-empty::before {
+        content: '\E734';
+    }
+
+    .powervisuals-glyph.circle-full::before {
+        content: '\E735';
+    }
+
+    .powervisuals-glyph.circle-three-quarters::before {
+        content: '\E736';
+    }
+
+    .powervisuals-glyph.circle-half::before {
+        content: '\E737';
+    }
+
+    .powervisuals-glyph.circle-one-quarter::before {
+        content: '\E738';
+    }
+
+    .powervisuals-glyph.link::before {
+        content: '\E8B5';
+    }
+
+    .powervisuals-glyph.bold::before {
+        content: '\E8DD';
+    }
+
+    .powervisuals-glyph.italic::before {
+        content: '\E8DB';
+    }
+
+    .powervisuals-glyph.underline::before {
+        content: '\E8DC';
+    }
+
+    .powervisuals-glyph.alignleft::before {
+        content: '\E8E4';
+    }
+
+    .powervisuals-glyph.aligncenter::before {
+        content: '\E8E3';
+    }
+
+    .powervisuals-glyph.alignright::before {
+        content: '\E8E2';
+    }
+
+    .powervisuals-glyph.boxes-stacked::before {
+        content: '\E730';
+        color: #C8C8C8;
+    }
+
+    .powervisuals-glyph.boxes-stacked::after {
+        position: absolute;
+        left: 0;
+        color: #000;
+    }
+
+    .powervisuals-glyph.boxes-stacked.boxes-zero::after {
+        content: '';
+    }
+
+    .powervisuals-glyph.boxes-stacked.boxes-one::after {
+        content: '\E732';
+    }
+
+    .powervisuals-glyph.boxes-stacked.boxes-two::after {
+        content: '\E733';
+    }
+
+    .powervisuals-glyph.boxes-stacked.boxes-three::after {
+        content: '\E731';
+    }
+
+    .powervisuals-glyph.boxes-stacked.boxes-four::before {
+        color: #000;
+    }
+
+    .powervisuals-glyph.bars-stacked::before {
+        content: '\E728';
+        color: #C8C8C8;
+    }
+
+    .powervisuals-glyph.bars-stacked::after {
+        position: absolute;
+        left: 0;
+        color: #000;
+    }
+
+    .powervisuals-glyph.bars-stacked.bars-zero::after {
+        content: '';
+    }
+
+    .powervisuals-glyph.bars-stacked.bars-one::after {
+        content: '\E725';
+    }
+
+    .powervisuals-glyph.bars-stacked.bars-two::after {
+        content: '\E726';
+    }
+
+    .powervisuals-glyph.bars-stacked.bars-three::after {
+        content: '\E727';
+    }
+
+    .powervisuals-glyph.bars-stacked.bars-four::before {
+        color: #000;
+    }
+
+    .powervisuals-glyph.star-stacked::before {
+        content: '\E724';
+        color: #C8C8C8;
+    }
+
+    .powervisuals-glyph.star-stacked::after {
+        position: absolute;
+        left: 0;
+        color: #000;
+    }
+
+    .powervisuals-glyph.star-stacked.star-empty::after {
+        content: '';
+    }
+
+    .powervisuals-glyph.star-stacked.star-half-full::after {
+        content: '\E721';
+    }
+
+    .powervisuals-glyph.star-stacked.star-full::before {
+        color: #000;
+    }
+
+    .powervisuals-glyph.traffic-light::before {
+        content: '\E713';
+        color: #000;
+    }
+
+    .powervisuals-glyph.traffic-light::after {
+        position: absolute;
+        left: 0;
+        content: '\E712';
+    }
+
+input[type=text],
+input[type=password],
+textarea {
+    border: 2px solid #C8C8C8;
+    outline: none;
+    padding: 8px;
+    clear: both;
+}
+
+    input[type=text]:hover,
+    input[type=password]:hover,
+    textarea:hover {
+        border-color: #777777;
+    }
+
+    input[type=text]:focus,
+    input[type=password]:focus,
+    textarea:focus,
+    input[type=text]:active,
+    input[type=password]:active,
+    textarea:active {
+        border-color: #F2C811;
+    }
+
+.input-field-label {
+    font-family: 'Segoe UI', 'wf_segoe-ui_normal', helvetica, arial, sans-serif;
+    font-size: 11px;
+    color: #333333;
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+input[disabled],
+input[disabled]:hover,
+input[disabled]:focus,
+input[disabled]:active {
+    background-color: #F4F4F4;
+    border-color: #F4F4F4;
+    color: #A6A6A6;
+}
+/* text input fields */
+input[type=text] {
+    border: 2px solid #C8C8C8;
+    outline: none;
+    padding: 4px;
+    clear: both;
+}
+
+    input[type=text]:hover {
+        border-color: #777777;
+    }
+
+    input[type=text]:focus,
+    input[type=text]:active {
+        border-color: #F2C811;
+    }
+
+.input-field-label {
+    font-family: 'Segoe UI', 'wf_segoe-ui_normal', helvetica, arial, sans-serif;
+    font-size: 11px;
+    color: #333333;
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+input[disabled],
+input[disabled]:hover,
+input[disabled]:focus,
+input[disabled]:active {
+    background-color: #F4F4F4;
+    border-color: #F4F4F4;
+    color: #A6A6A6;
+}
+/* this is a bit of legacy, it is however used other places, keep for now */
+.input-field-label {
+    font-family: 'Segoe UI', 'wf_segoe-ui_normal', helvetica, arial, sans-serif;
+    font-size: 11px;
+    color: #333333;
+    padding-bottom: 8px;
+    width: 100%;
+}
+/* Colors for form/input elements */
+/* #C8C8C8 */
+/* #F4F4F4 */
+/* #777777 */
+/* NOT IN RED LINE */
+/* #F2C811 */
+/* NOT IN RED LINE */
+/* #333333 */
+/* white   */
+/* NOT IN RED LINE */
+/* #F4F4F4 */
+/* #A6A6A6 */
+/* #A6A6A6 */
+/* */
+/* NOT IN RED LINE */
+/* #333333 */
+/* #A6A6A6 */
+/* NOT IN RED LINE */
+/* #333333 */
+/* NOT IN RED LINE */
+/* Global spacing/alignment settings that apply accross form/input elements */
+/* common element-to-element spacer withing element grouping (example: label and input box) */
+/* between element groups, this should be the space used (example: input controler followed by radio buttons) */
+/* standardized font size accross form elements */
+/* use specific line-height as browser ratios varry */
+/* assumed boarder size for most elements */
+/* used for hover transition effects */
+/*
+    this is the main wrapper DIV to include a single input within. It should contain
+    the input form element child as well as a label sibling.  It may also contain a
+    description P element optioinaly
+
+    this class is used a the indicator to use the new styling
+*/
+.pbi-input {
+    line-height: 20px;
+    position: relative;
+    margin: 0;
+    margin-top: 12px;
+    margin-bottom: 0;
+    /* only set top to avoid margin collapse */
+    padding: 0;
+    /* border: 1px solid red; */
+}
+
+    .pbi-input .pbi-info {
+        display: block;
+        position: relative;
+        margin: 0;
+        margin-top: 8px;
+        padding: 8px;
+        padding-left: 32px;
+        border: 0;
+        box-sizing: border-box;
+        color: #000000;
+        background-color: #DEEBF6;
+        font-family: 'Segoe UI', 'wf_segoe-ui_normal', helvetica, arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+        .pbi-input .pbi-info:after {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 8px;
+            top: 8px;
+            font-family: 'PowrMDL2';
+            content: "\E946";
+            font-size: 16px;
+            height: 16px;
+            width: 16px;
+        }
+
+    .pbi-input .pbi-alert {
+        display: block;
+        position: relative;
+        margin: 0;
+        margin-top: 8px;
+        padding: 8px;
+        padding-left: 32px;
+        border: 0;
+        color: #000000;
+        background-color: #FFF9AE;
+        font-family: 'Segoe UI', 'wf_segoe-ui_normal', helvetica, arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+        .pbi-input .pbi-alert:after {
+            position: absolute;
+            left: 8px;
+            top: 8px;
+            font-family: 'PowrMDL2';
+            content: "\E7BA";
+            font-size: 16px;
+            height: 16px;
+            width: 16px;
+        }
+
+    .pbi-input .pbi-securityAlert {
+        display: block;
+        position: relative;
+        margin: 0;
+        margin-top: 8px;
+        padding: 8px;
+        padding-left: 32px;
+        border: 0;
+        color: #000000;
+        background-color: #FFF9AE;
+        font-family: 'Segoe UI', 'wf_segoe-ui_normal', helvetica, arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+        .pbi-input .pbi-securityAlert:after {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 8px;
+            top: 8px;
+            font-family: 'PowrMDL2';
+            content: "\E117";
+            font-size: 16px;
+            height: 16px;
+            width: 16px;
+        }
+
+    .pbi-input .pbi-critical {
+        display: block;
+        position: relative;
+        margin: 0;
+        margin-top: 8px;
+        padding: 8px;
+        padding-left: 32px;
+        border: 0;
+        color: #000000;
+        background-color: #FADBD2;
+        font-family: 'Segoe UI', 'wf_segoe-ui_normal', helvetica, arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+        .pbi-input .pbi-critical:after {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 8px;
+            top: 8px;
+            font-family: 'PowrMDL2';
+            content: "\EA39";
+            font-size: 16px;
+            height: 16px;
+            width: 16px;
+        }
+
+    .pbi-input :not(.collapsed) {
+        transition: max-height 0.25s ease-in-out, opacity 0.25s;
+    }
+
+    .pbi-input .collapsed {
+        margin: 0;
+        padding: 0;
+        transition: max-height 0.25s ease-in-out, opacity 0.25s;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+    /* common input label stuff */
+    .pbi-input > label {
+        position: relative;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        min-height: 20px;
+        /*text-transform: lowercase;*/
+        font-family: 'Segoe UI', 'wf_segoe-ui_normal', helvetica, arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333333;
+        line-height: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /*z-index: @inputLayerBellow;*/
+        pointer-events: none;
+    }
+
+        .pbi-input > label:first-letter {
+            text-transform: uppercase;
+        }
+
+        .pbi-input > label > .infoIcon:after {
+            display: inline;
+            padding: 0;
+            margin: 0;
+            margin-left: 4px;
+            height: 12px;
+            width: 12px;
+            font-family: 'PowrMDL2';
+            font-size: 12px;
+            content: "\E946";
+            color: #333333;
+            /*z-index: 14;*/
+            background-color: transparent;
+        }
+/*  end text input fields*/
+.btn,
+button,
+.ok-btn,
+input[type=button] {
+    font-family: 'Segoe UI Semibold', 'wf_segoe-ui_semibold', helvetica, arial, sans-serif;
+    background-image: none;
+    box-shadow: none;
+    background-color: #C8C8C8;
+    padding: 6px 18px 6px 18px;
+    border: 2px solid #C8C8C8;
+    border-radius: 0;
+    text-shadow: none;
+    font-size: 14px;
+    width: auto;
+    line-height: 16px;
+    white-space: nowrap;
+    color: #000000;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+    .btn:hover,
+    button:hover,
+    .ok-btn:hover,
+    input[type=button]:hover,
+    .btn:focus,
+    button:focus,
+    .ok-btn:focus,
+    input[type=button]:focus,
+    .btn:active,
+    button:active,
+    .ok-btn:active,
+    input[type=button]:active,
+    .btn:active:hover,
+    button:active:hover,
+    .ok-btn:active:hover,
+    input[type=button]:active:hover,
+    .btn:focus:hover,
+    button:focus:hover,
+    .ok-btn:focus:hover,
+    input[type=button]:focus:hover {
+        border-color: #000000;
+        background-color: #F4F4F4;
+        color: #000000;
+        outline: none;
+    }
+
+    .btn:active,
+    button:active,
+    .ok-btn:active,
+    input[type=button]:active {
+        background-color: #666666;
+        border-color: #666666;
+        color: #000000;
+    }
+
+    .btn.primary,
+    button.primary,
+    .ok-btn.primary,
+    input[type=button].primary {
+        background-color: #F2C811;
+        border-color: #F2C811;
+        color: #000000;
+    }
+
+        .btn.primary:hover,
+        button.primary:hover,
+        .ok-btn.primary:hover,
+        input[type=button].primary:hover,
+        .btn.primary:focus,
+        button.primary:focus,
+        .ok-btn.primary:focus,
+        input[type=button].primary:focus,
+        .btn.primary:active,
+        button.primary:active,
+        .ok-btn.primary:active,
+        input[type=button].primary:active {
+            border-color: #000000;
+            color: #000000;
+        }
+
+        .btn.primary:focus,
+        button.primary:focus,
+        .ok-btn.primary:focus,
+        input[type=button].primary:focus,
+        .btn.primary:active,
+        button.primary:active,
+        .ok-btn.primary:active,
+        input[type=button].primary:active {
+            border-color: #000000;
+            color: #000000;
+        }
+
+            .btn.primary:focus:hover,
+            button.primary:focus:hover,
+            .ok-btn.primary:focus:hover,
+            input[type=button].primary:focus:hover,
+            .btn.primary:active:hover,
+            button.primary:active:hover,
+            .ok-btn.primary:active:hover,
+            input[type=button].primary:active:hover {
+                background-color: #957b08;
+            }
+
+    .btn.disabled,
+    button.disabled,
+    .ok-btn.disabled,
+    input[type=button].disabled,
+    .btn[disabled],
+    button[disabled],
+    .ok-btn[disabled],
+    input[type=button][disabled],
+    .btn.disabled.primary,
+    button.disabled.primary,
+    .ok-btn.disabled.primary,
+    input[type=button].disabled.primary,
+    .btn[disabled].primary,
+    button[disabled].primary,
+    .ok-btn[disabled].primary,
+    input[type=button][disabled].primary {
+        background-color: #E4E4E4;
+        border-color: #E4E4E4;
+        color: #A6A6A6;
+        cursor: default;
+    }
+
+        .btn.disabled:hover,
+        button.disabled:hover,
+        .ok-btn.disabled:hover,
+        input[type=button].disabled:hover,
+        .btn[disabled]:hover,
+        button[disabled]:hover,
+        .ok-btn[disabled]:hover,
+        input[type=button][disabled]:hover,
+        .btn.disabled.primary:hover,
+        button.disabled.primary:hover,
+        .ok-btn.disabled.primary:hover,
+        input[type=button].disabled.primary:hover,
+        .btn[disabled].primary:hover,
+        button[disabled].primary:hover,
+        .ok-btn[disabled].primary:hover,
+        input[type=button][disabled].primary:hover,
+        .btn.disabled:focus,
+        button.disabled:focus,
+        .ok-btn.disabled:focus,
+        input[type=button].disabled:focus,
+        .btn[disabled]:focus,
+        button[disabled]:focus,
+        .ok-btn[disabled]:focus,
+        input[type=button][disabled]:focus,
+        .btn.disabled.primary:focus,
+        button.disabled.primary:focus,
+        .ok-btn.disabled.primary:focus,
+        input[type=button].disabled.primary:focus,
+        .btn[disabled].primary:focus,
+        button[disabled].primary:focus,
+        .ok-btn[disabled].primary:focus,
+        input[type=button][disabled].primary:focus,
+        .btn.disabled:active,
+        button.disabled:active,
+        .ok-btn.disabled:active,
+        input[type=button].disabled:active,
+        .btn[disabled]:active,
+        button[disabled]:active,
+        .ok-btn[disabled]:active,
+        input[type=button][disabled]:active,
+        .btn.disabled.primary:active,
+        button.disabled.primary:active,
+        .ok-btn.disabled.primary:active,
+        input[type=button].disabled.primary:active,
+        .btn[disabled].primary:active,
+        button[disabled].primary:active,
+        .ok-btn[disabled].primary:active,
+        input[type=button][disabled].primary:active {
+            background-color: #E4E4E4;
+            border-color: #E4E4E4;
+            color: #A6A6A6;
+        }
+
+    .btn.imgButton,
+    button.imgButton,
+    .ok-btn.imgButton,
+    input[type=button].imgButton {
+        background-color: transparent;
+        border: 0px;
+        background-image: url('../images/powerbi-sprites.png');
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        padding: 0px;
+        outline: none;
+    }
+
+        .btn.imgButton.addButton,
+        button.imgButton.addButton,
+        .ok-btn.imgButton.addButton,
+        input[type=button].imgButton.addButton {
+            width: 16px;
+            height: 16px;
+            margin: 4px;
+            background-position: -20px -103px;
+        }
+
+            .btn.imgButton.addButton:hover,
+            button.imgButton.addButton:hover,
+            .ok-btn.imgButton.addButton:hover,
+            input[type=button].imgButton.addButton:hover {
+                background-position: -2px -103px;
+            }
+
+        .btn.imgButton.resizeButton,
+        button.imgButton.resizeButton,
+        .ok-btn.imgButton.resizeButton,
+        input[type=button].imgButton.resizeButton {
+            background-position: -54px -122px;
+        }
+
+        .btn.imgButton.optionsButton,
+        button.imgButton.optionsButton,
+        .ok-btn.imgButton.optionsButton,
+        input[type=button].imgButton.optionsButton {
+            opacity: 0.7;
+            background-position: -68px -2px;
+        }
+
+            .btn.imgButton.optionsButton:focus,
+            button.imgButton.optionsButton:focus,
+            .ok-btn.imgButton.optionsButton:focus,
+            input[type=button].imgButton.optionsButton:focus {
+                opacity: 1.0;
+                background-position: -48px -2px;
+                background-color: #333333;
+            }
+
+            .btn.imgButton.optionsButton:active,
+            button.imgButton.optionsButton:active,
+            .ok-btn.imgButton.optionsButton:active,
+            input[type=button].imgButton.optionsButton:active {
+                background-position: -48px -2px;
+            }
+
+        .btn.imgButton.deleteButton,
+        button.imgButton.deleteButton,
+        .ok-btn.imgButton.deleteButton,
+        input[type=button].imgButton.deleteButton {
+            width: 16px;
+            height: 16px;
+            margin: 4px;
+            background-position: -35px -24px;
+        }
+/* checkboxes */
+.pbi-input > input[type=checkbox] {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    opacity: 0.0;
+    /* hide original ui element, but allow its click behavior */
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    /*z-index: @inputLayerAbove;*/
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+    .pbi-input > input[type=checkbox] + label {
+        padding-left: 28px;
+    }
+
+        .pbi-input > input[type=checkbox] + label:before {
+            /*pointer-events: none;*/
+            position: absolute;
+            box-sizing: border-box;
+            top: 0px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #666666;
+            background-color: transparent;
+            content: "";
+            transition: all 250ms cubic-bezier(0.4, 0, 0.23, 1);
+        }
+
+        .pbi-input > input[type=checkbox] + label:after {
+            /*pointer-events: none;*/
+            /* empty */
+        }
+
+    .pbi-input > input[type=checkbox]:checked + label:before {
+        border: 10px solid #F2C811;
+        background-color: #F2C811;
+        /* we should abstract this to input commmon ui color some how */
+    }
+
+    .pbi-input > input[type=checkbox]:checked + label:after {
+        position: absolute;
+        box-sizing: border-box;
+        top: 4px;
+        left: 4px;
+        background-color: transparent;
+        color: #000;
+        /* we should abstract this to input commmon ui color some how */
+        font-family: 'PowrMDL2';
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 1;
+        /* set static as check is a font */
+        content: "\E73E";
+        /* our check utf8 char */
+    }
+
+    .pbi-input > input[type=checkbox]:disabled + label {
+        color: #A6A6A6;
+    }
+
+        .pbi-input > input[type=checkbox]:disabled + label:before {
+            border-color: #A6A6A6;
+            background-color: #C8C8C8;
+        }
+
+        .pbi-input > input[type=checkbox]:disabled + label:after {
+            color: #808080;
+            /* we should abstract this to input commmon ui color some how */
+        }
+
+    .pbi-input > input[type=checkbox]:disabled:checked + label:before {
+        border-color: #C8C8C8;
+        background-color: #C8C8C8;
+    }
+
+.modal-container {
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+}
+
+    .modal-container .dialog-layout {
+        padding: 28px;
+    }
+
+    .modal-container .modal-dialog {
+        border: 1px solid #666666;
+        background-color: #FFF;
+    }
+
+    .modal-container .dialog-actions {
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+
+        .modal-container .dialog-actions button {
+            margin-left: 8px;
+            float: right;
+        }
+
+    .modal-container .dialog-title {
+        font-family: 'Segoe UI', 'wf_segoe-ui_normal', helvetica, arial, sans-serif;
+        font-size: 28px;
+        padding-bottom: 20px;
+        color: #333333;
+    }
+
+    .modal-container .dialog-close-icon {
+        display: block;
+        position: absolute;
+        right: 16px;
+        top: 12px;
+    }
+
+.dropdown-toggle {
+    border-color: #C8C8C8;
+    background-color: transparent;
+    color: #333333;
+    padding-right: 8px;
+}
+
+    .dropdown-toggle:hover {
+        background-color: #777777;
+        background-color: transparent;
+    }
+
+    .dropdown-toggle:focus {
+        border-color: #F2C811;
+        background-color: transparent;
+    }
+
+    .dropdown-toggle:active {
+        border-color: #777777;
+        background-color: #EAEAEA;
+        box-shadow: none;
+    }
+
+    .dropdown-toggle .disabled,
+    .dropdown-toggle .disabled:hover,
+    .dropdown-toggle .disabled:focus,
+    .dropdown-toggle .disabled:disabled {
+        background-color: #F4F4F4;
+        border-color: #F4F4F4;
+    }
+
+    .dropdown-toggle .dropdown-icon {
+        margin-left: 16px;
+        margin-top: 2px;
+        font-family: 'PowrMDL2';
+        font-style: normal;
+        font-size: 32px;
+        display: inline-block;
+        font-size: 8px;
+    }
+
+        .dropdown-toggle .dropdown-icon::before {
+            content: "\E972";
+        }
+
+.dropdown.open .dropdown-toggle {
+    background-color: transparent;
+}
+
+    .dropdown.open .dropdown-toggle .dropdown-icon::before {
+        content: "\E971";
+    }
+
+.dropdown-menu {
+    margin-top: 0;
+    border-radius: 0;
+    border-color: #666666;
+    box-shadow: none;
+}
+
+    .dropdown-menu > li > a:hover,
+    .dropdown-menu > li > a:focus,
+    .dropdown-menu > li > a:active {
+        background-color: #EAEAEA;
+        background-image: none;
+    }
+/* radio */
+.pbi-input > input[type=radio] {
+    /* must be even */
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    opacity: 0.0;
+    /* hide original ui element, but allow its click behavior (see z-index) */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /*z-index: @inputLayerAbove;*/
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+    .pbi-input > input[type=radio] + label {
+        padding-left: 28px;
+    }
+
+        .pbi-input > input[type=radio] + label:before {
+            position: absolute;
+            box-sizing: border-box;
+            top: 0px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #666666;
+            /* we should abstract this to input commmon ui color some how */
+            background-color: transparent;
+            content: "";
+            /* create rounded 'radio' button */
+            border-radius: 50%;
+        }
+
+        .pbi-input > input[type=radio] + label:after {
+            /* empty */
+        }
+
+    .pbi-input > input[type=radio]:checked + label:before {
+        border-color: #666666;
+        /* we should abstract this to input commmon ui color some how */
+        background-color: transparent;
+        /* we should abstract this to input commmon ui color some how */
+        /* transparent or white */
+    }
+
+    .pbi-input > input[type=radio]:checked + label:after {
+        position: absolute;
+        box-sizing: border-box;
+        top: 5px;
+        left: 5px;
+        width: 10px;
+        height: 10px;
+        background-color: #666666;
+        /* we should abstract this to input commmon ui color some how */
+        border: 0 solid #666666;
+        /* we should abstract this to input commmon ui color some how */
+        border-radius: 50%;
+        content: "";
+    }
+
+    .pbi-input > input[type=radio]:disabled + label {
+        color: #A6A6A6;
+    }
+
+        .pbi-input > input[type=radio]:disabled + label:before {
+            border-color: #A6A6A6;
+            /* we should abstract this to input commmon ui color some how */
+        }
+
+        .pbi-input > input[type=radio]:disabled + label:after {
+            background-color: #A6A6A6;
+            /* we should abstract this to input commmon ui color some how */
+        }
+
+.pbi-spinner,
+.pbi-spinner-large {
+    background: url('../images/spinner.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    vertical-align: middle;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    width: 20px;
+    height: 20px;
+}
+
+.pbi-spinner-large {
+    background: url('../images/spinner_big.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 32px;
+    height: 32px;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/* single line text input */
+.pbi-input > input[type=text],
+.pbi-input > input[type=password] {
+    position: relative;
+    height: 32px;
+    width: 100%;
+    top: 24px;
+    left: 0px;
+    right: 50px;
+    margin: 0;
+    padding: 4px;
+    box-sizing: border-box;
+    color: #333333;
+    border: 2px solid #C8C8C8;
+    background-color: #FFF;
+    outline: none;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+    .pbi-input > input[type=text]::-webkit-input-placeholder,
+    .pbi-input > input[type=password]::-webkit-input-placeholder {
+        color: #A6A6A6;
+    }
+
+    .pbi-input > input[type=text]:-moz-placeholder,
+    .pbi-input > input[type=password]:-moz-placeholder {
+        color: #A6A6A6;
+    }
+
+    .pbi-input > input[type=text]::-moz-placeholder,
+    .pbi-input > input[type=password]::-moz-placeholder {
+        color: #A6A6A6;
+    }
+
+    .pbi-input > input[type=text]:-ms-input-placeholder,
+    .pbi-input > input[type=password]:-ms-input-placeholder {
+        color: #A6A6A6;
+    }
+
+    .pbi-input > input[type=text]::input-placeholder,
+    .pbi-input > input[type=password]::input-placeholder {
+        color: #A6A6A6;
+    }
+
+    .pbi-input > input[type=text]:not(:disabled):hover,
+    .pbi-input > input[type=password]:not(:disabled):hover {
+        border-color: #777777;
+    }
+
+    .pbi-input > input[type=text]:not(:disabled):focus,
+    .pbi-input > input[type=password]:not(:disabled):focus,
+    .pbi-input > input[type=text]:not(:disabled):active,
+    .pbi-input > input[type=password]:not(:disabled):active {
+        border-color: #F2C811;
+    }
+
+    .pbi-input > input[type=text]:disabled,
+    .pbi-input > input[type=password]:disabled {
+        color: #A6A6A6;
+        background-color: #F4F4F4;
+        border-color: #F4F4F4;
+    }
+
+        .pbi-input > input[type=text]:disabled::-webkit-input-placeholder,
+        .pbi-input > input[type=password]:disabled::-webkit-input-placeholder {
+            color: #d9d9d9;
+        }
+
+        .pbi-input > input[type=text]:disabled:-moz-placeholder,
+        .pbi-input > input[type=password]:disabled:-moz-placeholder {
+            color: #d9d9d9;
+        }
+
+        .pbi-input > input[type=text]:disabled::-moz-placeholder,
+        .pbi-input > input[type=password]:disabled::-moz-placeholder {
+            color: #d9d9d9;
+        }
+
+        .pbi-input > input[type=text]:disabled:-ms-input-placeholder,
+        .pbi-input > input[type=password]:disabled:-ms-input-placeholder {
+            color: #d9d9d9;
+        }
+
+        .pbi-input > input[type=text]:disabled::input-placeholder,
+        .pbi-input > input[type=password]:disabled::input-placeholder {
+            color: #d9d9d9;
+        }
+
+        .pbi-input > input[type=text]:disabled + label,
+        .pbi-input > input[type=password]:disabled + label {
+            color: #A6A6A6;
+        }
+
+    .pbi-input > input[type=text]:required,
+    .pbi-input > input[type=password]:required {
+        box-shadow: none;
+        /* because FF glows required */
+    }
+
+    .pbi-input > input[type=text]::-ms-clear,
+    .pbi-input > input[type=password]::-ms-clear {
+        display: none;
+        /* clear MS ie11/edge clear input X */
+    }
+
+    .pbi-input > input[type=text] + label,
+    .pbi-input > input[type=password] + label {
+        position: relative;
+        display: block;
+        top: -32px;
+    }
+
+    .pbi-input > input[type=text].attentionRequired,
+    .pbi-input > input[type=password].attentionRequired {
+        border-color: #E81123;
+    }
+
+        .pbi-input > input[type=text].attentionRequired:hover,
+        .pbi-input > input[type=password].attentionRequired:hover,
+        .pbi-input > input[type=text].attentionRequired:focus,
+        .pbi-input > input[type=password].attentionRequired:focus,
+        .pbi-input > input[type=text].attentionRequired:active,
+        .pbi-input > input[type=password].attentionRequired:active {
+            border-color: #E81123;
+        }
+
+    .pbi-input > input[type=text].labelless,
+    .pbi-input > input[type=password].labelless {
+        float: none;
+        position: relative;
+        top: 0;
+        margin: 0;
+    }
+
+        .pbi-input > input[type=text].labelless + label,
+        .pbi-input > input[type=password].labelless + label {
+            padding-bottom: 0;
+            display: none;
+        }
+
+.pbi-with-action {
+    padding-right: 50px;
+}
+
+    .pbi-with-action .pbi-action {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45px;
+        margin-top: 24px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        color: #000;
+    }
+
+        .pbi-with-action .pbi-action:hover {
+            /*font-weight: bold;*/
+        }
+
+    .pbi-with-action > .labelless ~ .pbi-action {
+        margin-top: 0px;
+    }
+
+.pbi-input > input[type=checkbox].toggle {
+    /* officaly 12px from txt baseline */
+    /* 3 * @inputCommonElementSpacer  minus half line height minus fontsize */
+    /* works well normal size, odd as scales up */
+    /*(2 * @inputCommonElementSpacer);*/
+    position: absolute;
+    box-sizing: border-box;
+    top: 28px;
+    width: 100%;
+    height: 20px;
+    outline: none;
+    opacity: 0.0;
+    /* hide original ui element, but allow its click behavior (see z-index) */
+    margin: 0;
+    padding: 0;
+    /*z-index: @inputLayerAbove;*/
+}
+
+    .pbi-input > input[type=checkbox].toggle + label {
+        padding: 0;
+        margin: 0;
+        padding-bottom: 28px;
+    }
+
+        .pbi-input > input[type=checkbox].toggle + label:before {
+            display: block;
+            position: absolute;
+            box-sizing: border-box;
+            top: 28px;
+            left: 0;
+            width: 44px;
+            height: 20px;
+            border: 2px solid #666666;
+            background-color: #FFF;
+            border-radius: 10px;
+            content: "";
+            transition: background-color 0.25s, border 0.25s;
+        }
+
+        .pbi-input > input[type=checkbox].toggle + label:after {
+            display: block;
+            position: absolute;
+            box-sizing: border-box;
+            top: 32px;
+            left: 4px;
+            width: 12px;
+            height: 12px;
+            border: 0;
+            background-color: #666666;
+            border-radius: 50%;
+            content: "";
+            transition: left 0.25s;
+        }
+
+    .pbi-input > input[type=checkbox].toggle:checked + label:before {
+        border: 2px solid #F2C811;
+        background-color: #F2C811;
+    }
+
+    .pbi-input > input[type=checkbox].toggle:checked + label:after {
+        border: 0;
+        background-color: #FFF;
+        left: 28px;
+    }
+
+    .pbi-input > input[type=checkbox].toggle:disabled + label:before {
+        border: 2px solid #C8C8C8;
+        background-color: #FFF;
+    }
+
+    .pbi-input > input[type=checkbox].toggle:disabled + label:after {
+        background-color: #F4F4F4;
+    }
+
+    .pbi-input > input[type=checkbox].toggle ~ .toggle-state,
+    .pbi-input > input[type=checkbox].toggle ~ *[ng-transclude] .toggle-state {
+        position: absolute;
+        display: block;
+        top: 28px;
+        left: 52px;
+    }

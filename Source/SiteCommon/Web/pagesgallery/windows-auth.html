@@ -1,0 +1,29 @@
+﻿<template>
+    <h1 class="st-title">Connect to Windows</h1>
+    <p class="st-subtitle">
+        ${subtitle}
+    </p>
+
+    <div class="st-float">
+        <div class="st-text">
+            <p class="st-text">Windows Username:
+                <span class="glyphicon pbi-glyph-info glyph-mini st-tooltip" title="Must be in <domain>\<username> or <machinename>\<username> format"></span>
+            </p>
+        </div>
+
+        <input class="st-input" type="text" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy || logInAsCurrentUser" value.bind="username" />
+        <label class="st-label">
+            <input type="checkbox" tabindex="-1" change.delegate="loginSelectionChanged()" checked.bind="logInAsCurrentUser" disabled.bind="MS.HttpService.isServiceBusy">
+            <span class="smallFontSize">Log in as current user?</span>
+        </label>
+    </div>
+
+    <div class="st-float">
+        <p class="st-text">Password:</p>
+        <input class="st-input" type="password" placeholder="password" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="password" />
+    </div>
+
+    <p class="st-float">
+        <button class="primary" click.delegate="OnValidate()" if.bind="!MS.HttpService.isServiceBusy">Validate</button>
+    </p>
+</template>

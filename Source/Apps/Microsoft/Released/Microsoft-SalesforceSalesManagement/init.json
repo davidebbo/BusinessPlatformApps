@@ -1,0 +1,120 @@
+﻿{
+  "Install": {
+    "Pages": [
+      {
+        "name": "$SiteCommon$/pagesgallery/gettingstarted.html",
+        "displayname": "Getting Started",
+        "architectureDiagram": "dist/Apps/Microsoft/Released/Microsoft-SalesforceSalesManagement/Web/Images/salesforceArchitectureDiagram.png",
+        "features": [
+          "Full cloud solution with minimum set up and maintenance considerations",
+          "Data pulled from Salesforce into an Azure SQL Database using Azure Data Factory",
+          "Connect to Azure SQL and import data into Power BI"
+        ]
+      },
+      {
+        "name": "$SiteCommon$/pagesgallery/azure-login.html",
+        "displayname": "Login",
+        "pricingUrl": "SalesforcePricingURL",
+        "pricingCost": "$('By deploying the template you authorize the creation of Azure resources on your subscription. The base cost of these services is approximately $1.5 a day. The cost will vary with the amount of data that will be moved.')"
+      },
+      {
+        "name": "$SiteCommon$/pagesgallery/salesforce-login.html",
+        "displayname": "Salesforce",
+        "salesforceObjects": "Opportunity,Account,Lead,Product2,OpportunityLineItem,OpportunityStage,User,UserRole"
+      },
+      {
+        "name": "$SiteCommon$/pagesgallery/sql-server.html",
+        "displayname": "Target",
+        "isAzureSql": true,
+        "showAzureSql": true,
+        "showNewSqlOption": true,
+        "subtitle": "Set up a connection to SQL so we can bring in your Salesforce data.",
+        "title": "Connect to your SQL Database",
+        "sqlInstance": "SalesforceDB",
+        "newSqlDatabase": "$(this.MS.UtilityService.GetUniqueId(10))"
+      },
+      {
+        "name": "customize.html",
+        "displayname": "Customize"
+      },
+      {
+        "name": "$SiteCommon$/pagesgallery/summary.html",
+        "displayname": "Summary"
+      },
+      {
+        "name": "$SiteCommon$/pagesgallery/progress.html",
+        "displayname": "Progress"
+      }
+    ],
+    "Actions": [
+      {
+        "name": "Microsoft-DeploySQLScripts",
+        "displayname": "Deploy DB Scripts",
+        "SqlServerIndex": "0",
+        "SqlScriptsFolder": "Service/Database/Cleanup"
+      },
+      {
+        "name": "Microsoft-SalesforceGetObjectMetadata",
+        "displayname": "Retrieve metadata from Salesforce"
+      },
+      {
+        "name": "Microsoft-SalesforceSqlArtefacts",
+        "displayname": "Create objects in SQL"
+      },
+      {
+        "name": "Microsoft-DeploySQLScripts",
+        "displayname": "Create DB relations",
+        "SqlServerIndex": "0",
+        "SqlScriptsFolder": "Service/Database/ADF"
+      },
+      {
+        "name": "Microsoft-ADFDeployLinkedServicesAndSqlCustomizations",
+        "displayname": "Creating linked services",
+        "DeploymentName": "ADFDeployment"
+      },
+      {
+        "name": "Microsoft-ADFDeployDatasets",
+        "displayname": "Creating historical datasets",
+        "DeploymentName": "ADFPreDeploymentPipeline"
+      },
+      {
+        "name": "Microsoft-ADFDeployPipelines",
+        "displayname": "Creating historical pipelines",
+        "DeploymentName": "ADFPostDeploymentPipeline"
+      },
+      {
+        "name": "Microsoft-ADFDeployDatasets",
+        "displayname": "Creating current datasets",
+        "DeploymentName": "ADFPostDeploymentPipeline",
+        "postDeploymentPipelineType": "PostDeployment"
+      },
+      {
+        "name": "Microsoft-ADFDeployPipelines",
+        "displayname": "Creating current pipelines",
+        "DeploymentName": "ADFPostDeploymentPipeline",
+        "postDeploymentPipelineType": "PostDeployment"
+      },
+      {
+        "name": "Microsoft-GetDataPullStatus",
+        "displayname": "Checking data exists in target",
+        "SqlServerIndex": 0,
+        "TargetSchema": "dbo",
+        "IsWaiting": true,
+        "FinishedActionName": "Microsoft-ADFSliceStatus"
+      }
+    ]
+  },
+  "Uninstall": {
+    "Pages": [
+      {
+        "name": "$SiteCommon$/pagesgallery/gettingstarted.html",
+        "displayname": "Uninstall Start"
+      },
+      {
+        "name": "$SiteCommon$/pagesgallery/azure-login.html",
+        "displayname": " Uninstall Login"
+      }
+    ],
+    "Actions": []
+  }
+}

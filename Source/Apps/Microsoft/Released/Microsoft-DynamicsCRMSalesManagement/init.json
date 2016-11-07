@@ -1,0 +1,43 @@
+﻿{
+    "Install": {
+        "Actions": [],
+        "Pages": [
+            {
+                "architectureDiagram": "dist/Apps/Microsoft/Released/Microsoft-DynamicsCRMSalesManagement/Web/Images/dynamicsCRMArchitectureDiagram.png",
+                "displayname": "Getting Started",
+                "features": [
+                    "Full cloud solution with minimum set up and maintenance considerations",
+                    "Data pulled from Dynamics CRM into an Azure SQL Database using Azure Data Factory",
+                    "Connect to Azure SQL and import data into Power BI"
+                ],
+                "name": "$SiteCommon$/pagesgallery/getting-started.html",
+                "templateName": "Sales Management for Dynamics CRM"
+            },
+            {
+                "name": "$SiteCommon$/pagesgallery/azure-login.html",
+                "displayname": "Login",
+                "pricingUrl": "SalesforcePricingURL",
+                "pricingCost": "$('By deploying the template you authorize the creation of Azure resources on your subscription. The base cost of these services is approximately $1.5 a day. The cost will vary with the amount of data that will be moved.')"
+            },
+            {
+                "name": "$SiteCommon$/pagesgallery/sql-server.html",
+                "displayname": "Target",
+                "isAzureSql": true,
+                "showAzureSql": true,
+                "showNewSqlOption": true,
+                "subtitle": "Set up a connection to SQL so we can bring in your Dynamics CRM data.",
+                "title": "Connect to your SQL Database",
+                "sqlInstance": "DynamicsCRMDB",
+                "newSqlDatabase": "$(this.MS.UtilityService.GetUniqueId(10))"
+            },
+            {
+                "name": "$SiteCommon$/pagesgallery/progress.html",
+                "displayname": "Progress"
+            }
+        ]
+    },
+    "Uninstall": {
+        "Pages": [],
+        "Actions": []
+    }
+}

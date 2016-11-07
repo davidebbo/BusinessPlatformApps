@@ -1,0 +1,26 @@
+﻿<template>
+    <h1 class="st-title">Connect to Cognitive Services</h1>
+    The Azure Cognitive Services enrich Twitter data by working out sentiment for each tweet.
+        <p class="st-subtitle">
+        </p>
+        <p class="st-question st-text">Would you like to spin up a new Cognitive Service account or use an existing key?</p>
+
+    <div>
+        <select class="btn btn-default dropdown-toggle st-input" change.delegate="onKeyTypeChange()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="cognitiveSelectedType">
+            <option value="ExistingKey">Existing Cognitive Service</option>
+            <option value="NewKey">New Cognitive Service</option>
+        </select>
+    </div>
+
+    <div if.bind="cognitiveSelectedType == 'ExistingKey'">
+        <div class="st-float">
+            <p class="st-text">Cognitive Key:</p>
+            <input class="st-input" type="text" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="cognitiveServiceKey" />
+        </div>
+
+
+        <p class="st-float">
+            <button class="primary" click.delegate="OnValidate()" if.bind="!MS.HttpService.isServiceBusy">Validate</button>
+        </p>
+    </div>
+</template>

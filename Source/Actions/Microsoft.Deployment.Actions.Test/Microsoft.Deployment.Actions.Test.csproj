@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDCB1AFD-917C-41B9-8748-F2769BA6DA16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Deployment.Actions.Test</RootNamespace>
+    <AssemblyName>Microsoft.Deployment.Actions.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0-beta2\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.8.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.8.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.8.0\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Deployment.Common, Version=1.0.6155.3823, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Deployment.Common.1.3.3-dev201611070203\lib\net452\Microsoft.Deployment.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=3.13.7.964, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.13.7\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory.Platform, Version=3.13.7.964, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.13.7\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.2-beta1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Spatial, Version=5.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.8.0\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Shared\SharedVersion.cs">
+      <Link>Properties\SharedVersion.cs</Link>
+    </Compile>
+    <Compile Include="ActionsTest\AzureCommonTests.cs" />
+    <Compile Include="ActionsTest\CDMTests.cs" />
+    <Compile Include="ActionsTest\OnPremiseTests.cs" />
+    <Compile Include="ActionsTest\TestActions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\SalesforceSOAP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TestHelpers\AAD.cs" />
+    <Compile Include="TestHelpers\Credential.cs" />
+    <Compile Include="TestHelpers\TestHarness.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Apps\TestApps\TestApp2\init.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Apps\TestApps\TestApp\init.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.convertLeadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.createResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DebuggingInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.deleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DeleteResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeAllTabsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeAppMenuItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeAppMenuResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeApprovalLayout.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeApprovalLayoutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeAvailableQuickActionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeAvailableQuickActionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeCompactLayout.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeCompactLayoutsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeCompactLayoutsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeDataCategoryGroupResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeDataCategoryGroupsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeDataCategoryGroupStructureResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeDataCategoryGroupStructuresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeFlexiPageResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeFlexiPagesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeGlobalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeGlobalResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeGlobalTheme.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeGlobalThemeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeKnowledgeSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeLayoutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeLayoutResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeNounResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeNounsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribePathAssistant.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describePathAssistantsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describePrimaryCompactLayoutsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeQuickActionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeQuickActionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeSearchableEntitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeSearchableEntityResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeSearchLayoutResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeSearchLayoutsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeSearchScopeOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeSearchScopeOrderResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeSObjectListViewsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeSObjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeSObjectResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeSObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeSoftphoneLayoutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeSoftphoneLayoutResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeSoqlListView.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeSoqlListViewsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeTab.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeTabSetResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeTabsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeThemeItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeThemeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.describeVisualForceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.DescribeVisualForceResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.emptyRecycleBinResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.EmptyRecycleBinResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.executeListViewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.ExecuteListViewResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.getDeletedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.GetDeletedResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.getServerTimestampResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.GetServerTimestampResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.getUpdatedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.GetUpdatedResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.getUserInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.GetUserInfoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.invalidateSessionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.InvalidateSessionsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.KnowledgeSettings.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.LeadConvertResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.LimitInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.loginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.LoginResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.logoutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.mergeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.MergeResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.PerformQuickActionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.performQuickActionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.processResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.ProcessResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.queryAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.queryMoreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.queryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.QueryResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.QuickActionTemplateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.renderEmailTemplateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.RenderEmailTemplateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.resetPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.ResetPasswordResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.retrieveQuickActionTemplatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.retrieveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.SaveResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.searchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.SearchResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.sendEmailMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.sendEmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.SendEmailResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.setPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.SetPasswordResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.sObject.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.undeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.UndeleteResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.updateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.upsertResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Microsoft.Deployment.Actions.Test.SalesforceSOAP.UpsertResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesforceSOAP\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SalesforceSOAP\configuration.svcinfo" />
+    <None Include="Service References\SalesforceSOAP\configuration91.svcinfo" />
+    <None Include="Apps\TestApps\TestApp2\Web\azure.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Apps\TestApps\TestApp2\Web\gettingStarted.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Apps\TestApps\TestApp2\Web\Images\twitterArchitectureDiagram.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Apps\TestApps\TestApp2\Web\progress.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Service References\SalesforceSOAP\partner.wsdl" />
+    <None Include="SiteCommon\Web\pagesgallery\navbar.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SiteCommon\Web\pagesgallery\navbuttons.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SiteCommon\Web\pagesgallery\nested\gettingstartedtemplate.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SiteCommon\Web\pagesgallery\progresstemplate.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SiteCommon\Web\pagesgallery\sqlservertemplate.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SiteCommon\Web\pagesgallery\summarytemplate.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Deployment.Actions.ADF\Microsoft.Deployment.Actions.ADF.csproj">
+      <Project>{5bc1475c-bc02-431a-96c7-86c84585d3f7}</Project>
+      <Name>Microsoft.Deployment.Actions.ADF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Deployment.Actions.AzureCustom\Microsoft.Deployment.Actions.AzureCustom.csproj">
+      <Project>{0b8db384-f28c-4c1d-9e21-b0957aa9a736}</Project>
+      <Name>Microsoft.Deployment.Actions.AzureCustom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Deployment.Actions.Common\Microsoft.Deployment.Actions.Common.csproj">
+      <Project>{4e627186-0cb1-4ade-8b17-9513b690a854}</Project>
+      <Name>Microsoft.Deployment.Actions.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Deployment.Actions.Custom\Microsoft.Deployment.Actions.Custom.csproj">
+      <Project>{db4fc606-2664-4777-8072-0d354dbc7633}</Project>
+      <Name>Microsoft.Deployment.Actions.Custom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Deployment.Actions.OnPremise\Microsoft.Deployment.Actions.OnPremise.csproj">
+      <Project>{34d595e2-3c6f-422b-a863-a7e8e1baae06}</Project>
+      <Name>Microsoft.Deployment.Actions.OnPremise</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Deployment.Actions.Salesforce\Microsoft.Deployment.Actions.Salesforce.csproj">
+      <Project>{5bd9a308-4df3-4402-99b6-bda9945e025e}</Project>
+      <Name>Microsoft.Deployment.Actions.Salesforce</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Deployment.Actions.SQL\Microsoft.Deployment.Actions.SQL.csproj">
+      <Project>{e8162254-3b16-4509-bdb8-994a024bdf92}</Project>
+      <Name>Microsoft.Deployment.Actions.SQL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Apps\TestApps\TestApp2\Web\azure.ts">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Apps\TestApps\TestApp2\Web\gettingStarted.ts">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Apps\TestApps\TestApp2\Web\progress.ts">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SiteCommon\Web\pagesgallery\navbar.ts">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SiteCommon\Web\pagesgallery\navbuttons.ts">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SiteCommon\Web\pagesgallery\nested\gettingstartedtemplate.ts">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SiteCommon\Web\pagesgallery\progresstemplate.ts">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SiteCommon\Web\pagesgallery\sqlservertemplate.ts">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SiteCommon\Web\pagesgallery\summarytemplate.ts">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Apps\TestApps\TestApp2\Resources\" />
+    <Folder Include="Apps\TestApps\TestApp2\Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SalesforceSOAP\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Apps\TestApps\TestApp\Service\Resources\Scripts\testScript.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

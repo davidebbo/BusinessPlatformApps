@@ -1,0 +1,34 @@
+﻿<template>
+    <h1 class="st-title">Login to Salesforce</h1>
+
+    <div class="st-float">
+        <p class="st-text">We now need to set up a connection to Salesforce in order to pull data.</p>
+    </div>
+
+    <div class="st-float">
+        <p class="st-text">Salesforce Username:</p>
+        <input class="st-input" type="text" placeholder="username" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="salesforceUsername" />
+    </div>
+
+    <div class="st-float">
+        <p class="st-text">Salesforce Password:</p>
+        <input class="st-input" type="password" placeholder="password" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="salesforcePassword" />
+    </div>
+
+    <div>
+        <p class="st-text">Salesforce Online URL:</p>
+        <select class="btn btn-default dropdown-toggle st-input" value.bind="salesforceUrl">
+            <option>https://login.salesforce.com/</option>
+            <option>https://test.salesforce.com/</option>
+        </select>
+    </div>
+    <div class="st-float">
+        <p class="st-text">Salesforce Token:</p>
+        <input class="st-input" type="text" placeholder="token" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="salesforceToken" />
+        <span class="glyphicon pbi-glyph-info glyph-mini st-tooltip" title="If you do not know what your security token is, or how to get it, please contact your Salesforce administrator."></span>
+    </div>
+
+    <p class="st-float">
+        <button class="primary" click.delegate="OnValidate()" if.bind="!MS.HttpService.isServiceBusy">Validate</button>
+    </p>
+</template>

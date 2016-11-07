@@ -1,0 +1,39 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Microsoft.Deployment.Actions.Custom</id>
+    <version>1.0.0-dev</version>
+    <title>Microsoft Business Platform Custom Actions</title>
+    <!--*-->
+    <authors>Microsoft Business Platform Team</authors>
+    <owners>Microsoft</owners>
+    <!--
+    <licenseUrl></licenseUrl>
+    <projectUrl></projectUrl>
+    <iconUrl></iconUrl>
+-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--*-->
+    <description>The Microsoft Business Platform Custom Actions</description>
+    <!--*-->
+    <releaseNotes>Initial Version</releaseNotes>
+    <copyright>Microsoft Corporation 2016</copyright>
+    <tags>
+    </tags>
+    <dependencies>
+         <group targetFramework="net452">
+            <dependency id="Microsoft.Azure.KeyVault.Core" version="1.0.0" />
+            <dependency id="Microsoft.Bcl" version="1.1.10" />
+            <dependency id="Microsoft.Bcl.Async" version="1.0.168" />
+            <dependency id="Microsoft.Bcl.Build" version="1.0.21" />
+            <dependency id="Microsoft.Data.Edm" version="5.6.4" />
+            <dependency id="Microsoft.Data.OData" version="5.6.4" />
+            <dependency id="Microsoft.Data.Services.Client" version="5.6.4" />
+            <dependency id="Microsoft.Deployment.Common" version="1.1.1.43-dev" />
+            <dependency id="Microsoft.Net.Http" version="2.2.29" />
+            <dependency id="System.Spatial" version="5.6.4" />
+            <dependency id="WindowsAzure.Storage" version="7.2.1" />
+         </group>
+      </dependencies>
+  </metadata>
+</package>

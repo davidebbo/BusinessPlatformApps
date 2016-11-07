@@ -1,0 +1,160 @@
+{
+    "Install": {
+        "Pages": [
+
+            //GettingStarted
+            {
+                "name": "$SiteCommon$/pagesgallery/getting-started.html",
+                "displayname": "Getting Started",
+                "architectureDiagram": "dist/Apps/Microsoft/Released/Microsoft-TwitterTemplate/Web/twitterArchitectureDiagram.png",
+                "features": [
+                    "Full cloud solution with minimum set up and maintenance considerations",
+                    "Real time data pulled from Twitter & enriched using machine learning",
+                    "Connect to Azure SQL and import data into Power BI"
+                ],
+
+                "requirements": [
+                    "Azure Subscription",
+                    "Power BI Desktop (latest version)",
+                    "Power BI Pro (to share the template with your organization)",
+                    "Twitter Account"
+                ],
+                "subtitle": "'Welcome to the public preview of the brand and campaign management solution template",
+                "templateName": "'Brand and Campaign Management for Twitter"
+            },
+
+            // AzurePage
+            {
+                "name": "$SiteCommon$/pagesgallery/azure-login.html",
+                "displayname": "Login",
+                "pricingUrl": "http://url",
+                "pricingCost": "Cost goes here"
+            },
+
+            // SQL Server Page
+            {
+                "name": "$SiteCommon$/pagesgallery/sql-server.html",
+                "displayname": "Source",
+                "isAzureSql": true,
+                "showAzureSql": false,
+                "showNewSqlOption": "true",
+                "subtitle": "Set up a connection to SQL so we can bring in your Twitter data.",
+                "title": "Connect to your SQL Database",
+                "sqlInstance": "NewSql",
+                "newSqlDatabase": "twitterDB"
+            },
+
+            // Cognitive Page
+            {
+                "name": "$SiteCommon$/pagesgallery/cognitive-services.html",
+                "displayname": "Cognitive Api"
+            },
+
+            // Twitter Page
+            {
+                "name": "$SiteCommon$/pagesgallery/twitter.html",
+                "displayname": "Twitter"
+            },
+
+            // Twitter Search Page
+            {
+                "name": "$SiteCommon$/pagesgallery/search-terms.html",
+                "displayname": "Search Terms"
+            },
+
+            // Twitter Handles
+            {
+                "name": "$SiteCommon$/pagesgallery/twitter-handles.html",
+                "displayname": "Twitter Handles"
+            },
+
+            // Summary
+            {
+                "name": "$SiteCommon$/pagesgallery/summary.html",
+                "displayname": "Summary",
+                "values": {
+                    "Target Server": "$(this.MS.DataStore.getValue('Server'))",
+                    "Target Database": "$(this.MS.DataStore.getValue('Database'))",
+                    "Target Username": "$(this.MS.DataStore.getValue('Username'))"
+                }
+            },
+
+            // Progress
+            {
+                "name": "$SiteCommon$/pagesgallery/progress.html",
+                "displayname": "Deploy",
+                "uniqueId": "$(this.MS.UtilityService.GetUniqueId(18))",
+                "uniqueIdFunction": "$(this.MS.UtilityService.GetUniqueId(18), )",
+
+                "LogicAppHostingPlan": "$(this.uniqueId, issaved=true)",
+                "LogicAppName": "$(this.uniqueId, issaved=true)",
+                "LogicAppNameHistorical": "$(this.uniqueId, issaved=true)",
+                "SiteName": "$(this.uniqueIdFunction, issaved=true)",
+                "functionAppHostingPlan": "$(this.uniqueIdFunction, issaved=true)"
+            }
+        ],
+
+        "Actions": [
+            {
+                "name": "Microsoft-DeploySQLScripts",
+                "displayname": "Deploy DB Scripts",
+                "SqlServerIndex": "0",
+                "SqlScriptsFolder": "Service/Database/LogicApps"
+            },
+            {
+                "name": "Microsoft-SetConfigValueInSql",
+                "displayname": "Deploy DB Configuration",
+                "SqlServerIndex": "0",
+                "SqlConfigTable": "[pbist_twitter].[configuration]"
+            },
+            {
+                "name": "Microsoft-DeployCognitiveServiceText",
+                "displayname": "Deploy Cognitive Service",
+                "DeploymentName": "Cognitive"
+            },
+            {
+                "name": "Microsoft-GetCognitiveServiceKeys",
+                "displayname": "Deploy Cognitive Service Key"
+            },
+            {
+                "name": "Microsoft-DeployTwitterFunction",
+                "displayname": "Deploy Twitter Function",
+                "DeploymentName": "Function"
+            },
+            {
+                "name": "Microsoft-WaitForArmDeploymentStatus",
+                "displayname": "Validating Twitter Function",
+                "DeploymentName": "Function"
+            },
+            {
+                "name": "Microsoft-DeployTwitterCSharpFunctionAssets",
+                "displayname": "Deploy Twitter Function Assets"
+            },
+            {
+                "name": "Microsoft-DeployTwitterHistoricalLogicApp",
+                "displayname": "Deploy Twitter Logic App",
+                "DeploymentName": "LogicApp"
+            },
+            {
+                "name": "Microsoft-WaitForArmDeploymentStatus",
+                "displayname": "Validating Logic App",
+                "DeploymentName": "LogicApp"
+            },
+            {
+                "name": "Microsoft-RunLogicAppHistorical",
+                "displayname": "Run Logic App Historical",
+                "DeploymentName": "LogicApp"
+            },
+            {
+                "name": "Microsoft-DeployTwitterLogicApp",
+                "displayname": "Deploy Twitter Logic App",
+                "DeploymentName": "LogicApp"
+            },
+            {
+                "name": "Microsoft-WaitForArmDeploymentStatus",
+                "displayname": "Validating Logic App",
+                "DeploymentName": "LogicApp"
+            }
+        ]
+    }
+}

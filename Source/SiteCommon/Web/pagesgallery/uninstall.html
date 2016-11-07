@@ -1,0 +1,28 @@
+﻿<template>
+    <h1 class="st-title">Uninstall ${templateName}</h1>
+
+    <p class="st-subtitle">${subtitle}</p>
+
+    <p class="st-text" if.bind="isEvaluation">For evaluation purposes only. Not intended for production use.</p>
+
+    <!-- Diagram -->
+    <div class="st-setup">
+        <img class="st-diagram" src.bind="architectureDiagram">
+    </div>
+
+    <!-- Set Up -->
+    <div class="st-setup">
+        <div if.bind="uninstallList.length > 0">
+            <p class="st-subtitle">The uninstaller will remove:</p>
+            <div class="st-text">
+                <ul>
+                    <li repeat.for="item of uninstallList">${item}</li>
+                </ul>
+                <p if.bind="showDownload">
+                    Since you are copying your data into SQL Server, you will need to use our local installer to set up the template.
+                    In order to download the solution template installer, please click the Download button below.
+                </p>
+            </div>
+        </div>
+    </div>
+</template>

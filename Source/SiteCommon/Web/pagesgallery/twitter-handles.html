@@ -1,0 +1,15 @@
+﻿<template>
+    <h1 class="st-title">Customize your twitter handles</h1>
+    <p class="st-subtitle">
+      We can enrich tweets with the tweet direction. If you would like to track whether a tweet was tweeted to or from a specific account, please explicitly list the Twitter Handles you are interested in.
+    </p>
+
+    <div class="st-float">
+        <p class="st-text">Twitter Handles: <i>(Optional)</i></p>
+        <input class="st-input" type="text" placeholder="@MSPowerBI @Azure" change.delegate="viewmodel.Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="viewmodel.accounts" />
+    </div>
+
+    <p class="st-float">
+        <button class="primary" click.delegate="viewmodel.OnValidate()" if.bind="!MS.HttpService.isServiceBusy">Validate</button>
+    </p>
+</template>

@@ -1,0 +1,21 @@
+{
+  "Install": 
+  {
+    "Pages": [
+      {
+        "name": "$SiteCommon$/pagesgallery/getting-started.html",
+        "displayname": "Getting Started",
+        "templateName": "Test Property",
+        "subtitle": "Test Subtitle",
+        "onNext": [
+          {
+            "name": "Microsoft-TestServiceActionFailed",
+            "TargetSchema": "pbist",
+            "subtitle": "$(this.subtitle, isSaved=true)"
+          }
+        ]
+      }
+    ],
+    "Actions": []
+  }
+}

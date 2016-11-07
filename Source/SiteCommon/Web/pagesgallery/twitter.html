@@ -1,0 +1,11 @@
+﻿<template>
+    <h1 class="st-title">Connect to Twitter</h1>
+    <p class="st-subtitle">
+        Set up a connection to your Twitter account so we can pull data. You will get to customize the search queries you want to track later on in the installation.
+    </p>
+
+    <div class="st-float">
+        <button class="primary" if.bind="!isAuthenticated && isActivated" click.delegate="connect()">Connect to Twitter</button>
+        <button class="primary" if.bind="isAuthenticated && isActivated">Validated</button>
+    </div>
+</template>

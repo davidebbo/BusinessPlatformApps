@@ -1,0 +1,36 @@
+<template>
+    <!--requires-->
+    <require from="SiteCommon/Web/controls/navbar"></require>
+    <require from="SiteCommon/Web/controls/navbuttons"></require>
+
+    <div class="st-header semiboldFont">
+        <span class="powervisuals-glyph boxes-four boxes-stacked st-icon-ms"></span>
+        <span>Microsoft</span>
+        <span class="st-header-bar">|</span>
+        <span>Power BI</span>
+        <span class="glyphicon pbi-glyph-close glyph-small st-close" click.delegate="MS.HttpService.Close()" if.bind="MS.HttpService.isOnPremise"></span>
+    </div>
+    <div class="st-content regularFont">
+        <navbar router.bind="MS.NavigationService"></navbar>
+        <div class="st-main">
+            <div class="st-section">
+                <div class="st-section-wrapper">
+                    <router-view></router-view>
+                    <navbuttons if.bind="MS.NavigationService.appName !== ''" viewmodel.bind="MS.NavigationService.currentViewModel"></navbuttons>
+                </div>
+                <div class="st-footer">
+                    <span><a class="st-footer-text" href="mailto:PBISolnTemplates@microsoft.com" target="_top">CONTACT US</a></span>
+                    <span><a class="st-footer-text" href="https://www.microsoft.com/en-us/privacystatement/OnlineServices/Default.aspx" target="_blank">PRIVACY & COOKIES</a></span>
+                    <span><a class="st-footer-text" href="https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx" target="_blank">TERMS OF USE</a></span>
+                    <span><a class="st-footer-text" href="https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/en-us.aspx" target="_blank">TRADEMARKS</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="st-contact-us" if.bind="MS.ErrorService.showContactUs">
+        <a href="mailto:PBISolnTemplates@microsoft.com" target="_top">Experiencing an error? Click here to let us know.</a>
+        <span class="glyphicon pbi-glyph-close st-contact-us-close" click.delegate="MS.ErrorService.showContactUs = false"></span>
+    </div>
+</template>
