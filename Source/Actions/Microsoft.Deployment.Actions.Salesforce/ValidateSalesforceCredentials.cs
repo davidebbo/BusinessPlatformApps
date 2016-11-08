@@ -5,6 +5,7 @@ using Microsoft.Deployment.Actions.Salesforce.Helpers;
 using Microsoft.Deployment.Actions.Salesforce.SalesforceSOAP;
 using Microsoft.Deployment.Common.ActionModel;
 using Microsoft.Deployment.Common.Actions;
+using Microsoft.Deployment.Common.Helpers;
 
 namespace Microsoft.Deployment.Actions.Salesforce
 {
@@ -41,7 +42,7 @@ namespace Microsoft.Deployment.Actions.Salesforce
             }
             catch (Exception e)
             {
-                return new ActionResponse(ActionStatus.Failure, e);
+                return new ActionResponse(ActionStatus.Failure, JsonUtility.GetEmptyJObject(), e, "SalesforceLoginInvalid");
             }
 
             return new ActionResponse(ActionStatus.Success, lr);

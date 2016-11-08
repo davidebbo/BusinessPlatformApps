@@ -219,4 +219,7 @@
   <data name="MsCrm_ErrorActivateProfile" xml:space="preserve">
     <value>Could not activate replication profile</value>
   </data>
+  <data name="SalesforceLoginInvalid" xml:space="preserve">
+    <value>Login failed, check that you have entered the correct username, password and token.</value>
+  </data>
 </root>
