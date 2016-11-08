@@ -42,7 +42,7 @@ namespace Microsoft.Deployment.Actions.Salesforce
             resp.ADFPipelineJsonData = new ExpandoObject();
             resp.ADFPipelineJsonData.fields = adfFields;
 
-            return new ActionResponse(ActionStatus.Success, resp);
+            return new ActionResponse(ActionStatus.Success, JsonUtility.GetJObjectFromObject(resp));
         }
 
         public List<ADFField> ExtractSimpleMetadata(DescribeSObjectResult sfobject)
