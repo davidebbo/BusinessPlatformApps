@@ -66,7 +66,7 @@ namespace Microsoft.Deployment.Common.Actions.MsCrm
             KeyVaultClient kvClient = new KeyVaultClient(GetAccessToken);
             var secret = kvClient.SetSecretAsync(vault.Properties.VaultUri, secretName, connectionString, new Dictionary<string, string>() {{organizationId, tenantId}},
                                                  null, new SecretAttributes() {Enabled = true}).GetAwaiter().GetResult();
-            return new ActionResponse(ActionStatus.Success, secret.Id);
+            return new ActionResponse(ActionStatus.Success, secret.Id, true);
         }
     }
 }
