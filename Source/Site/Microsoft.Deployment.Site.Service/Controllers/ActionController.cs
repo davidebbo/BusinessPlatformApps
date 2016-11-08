@@ -15,7 +15,7 @@ namespace Microsoft.Deployment.Site.Service.Controllers
     public class ActionController : ApiController
     {
         [HttpPost]
-        public Task<ActionResponse> ExecuteAction(string id, [FromBody] ActionRequest body)
+        public async Task<ActionResponse> ExecuteAction(string id, [FromBody] ActionRequest body)
         {
             Dictionary<string, string> param = new Dictionary<string, string>();
             param.Add("Service", "Online");
@@ -78,8 +78,10 @@ namespace Microsoft.Deployment.Site.Service.Controllers
                 SerivceRootUrl = "" // Addressed Later
             };
 
-            return new CommonController(WebApiConfig.CommonControllerModel)
+            ActionResponse response =  await new CommonController(WebApiConfig.CommonControllerModel)
                 .ExecuteAction(info, body);
+
+            return response;
         }
     }
 }
