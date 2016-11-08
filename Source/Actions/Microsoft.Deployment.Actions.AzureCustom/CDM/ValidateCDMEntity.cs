@@ -20,21 +20,23 @@ namespace Microsoft.Deployment.Actions.AzureCustom.CDM
     using System.Net.Http;
 
     [Export(typeof(IAction))]
-    public class GetEnvironID : BaseAction
+    public class ValidateCDMEntity : BaseAction
     {
         public override async Task<ActionResponse> ExecuteActionAsync(ActionRequest request)
         {
             var azureToken = request.DataStore.GetJson("AzureToken")["access_token"].ToString();
-            var objectIds = request.DataStore.GetValue("objectIds").ToString();
-
             AzureHttpClient client = new AzureHttpClient(azureToken);
 
-            var response = await client.ExecuteGenericRequestWithHeaderAsync(HttpMethod.Get, $"https://management.azure.com/providers/Microsoft.PowerApps/objectIds/{objectIds}/userSettings/environment?api-version=2016-11-01", "{}");
+            var response = await client.ExecuteGenericRequestWithHeaderAsync(HttpMethod.Post, "https://management.azure.com/providers/Microsoft.PowerApps/enroll?api-version=2016-11-01&id=@id", "{}");
             var responseString = await response.Content.ReadAsStringAsync();
             var responseParsed = JsonUtility.GetJsonObjectFromJsonString(responseString);
-            var environId = responseParsed["properties"]["settings"]["portalCurrentEnvironmentName"].ToString();
+            var objectId = responseParsed["featuresEnabled"][0]["id"].ToString();
 
-            request.DataStore.AddToDataStore("EnvironmentID", environId, DataStoreType.Public);
+            int indexFrom = objectId.IndexOf("objectIds/") + "objectIds/".Length;
+            int indexTo = objectId.LastIndexOf("/features");
+
+            objectId = objectId.Substring(indexFrom, indexTo - indexFrom);
+            request.DataStore.AddToDataStore("ObjectID", objectId, DataStoreType.Public);
 
             return new ActionResponse(ActionStatus.Success);
         }
