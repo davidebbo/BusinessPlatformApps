@@ -81,7 +81,7 @@ namespace Microsoft.Deployment.Actions.Salesforce
                 datasetParam.AddParameter("sqlServerPassword", "securestring", sqlCreds.Password);
                 datasetParam.AddParameter("salesforceSecurityToken", "securestring", sfToken);
 
-                var armTemplate = JsonUtility.GetJsonObjectFromJsonString(System.IO.File.ReadAllText(Path.Combine(FileUtility.GetLocalTemplatePath(request.Info.AppName), "Service/ADF/datasets.json")));
+                var armTemplate = JsonUtility.GetJsonObjectFromJsonString(System.IO.File.ReadAllText(Path.Combine(FileUtility.GetLocalTemplatePath(request.Info.App.AppFilePath), "Service/ADF/datasets.json")));
                 var armParamTemplate = JsonUtility.GetJObjectFromObject(datasetParam.GetDynamicObject());
 
                 armTemplate.Remove("parameters");
