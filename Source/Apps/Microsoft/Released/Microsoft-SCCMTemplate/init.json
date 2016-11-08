@@ -8,7 +8,7 @@
     "Pages": [
       // Getting Started
       {
-        "name": "$SiteCommon$/pagesgallery/gettingstarted.html",
+        "name": "$SiteCommon$/pagesgallery/getting-started.html",
         "displayname": "Getting Started",
         "architectureDiagram": "dist/Apps/Microsoft/Released/Microsoft-SCCMTemplate/Web/Images/SCCMArchitectureDiagram.png",
         "features": [

@@ -9,6 +9,7 @@ using Microsoft.Deployment.Actions.Salesforce.Helpers;
 using Microsoft.Deployment.Actions.Salesforce.SalesforceSOAP;
 using Microsoft.Deployment.Common.ActionModel;
 using Microsoft.Deployment.Common.Actions;
+using Microsoft.Deployment.Common.Helpers;
 
 namespace Microsoft.Deployment.Actions.Salesforce
 {
@@ -80,7 +81,7 @@ namespace Microsoft.Deployment.Actions.Salesforce
                 metadata.Objects.Add(sobject);
             }
 
-            return new ActionResponse(ActionStatus.Success, metadata);
+            return new ActionResponse(ActionStatus.Success, JsonUtility.GetJObjectFromObject(metadata));
         }
     }
 }
