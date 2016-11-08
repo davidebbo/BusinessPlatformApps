@@ -1,6 +1,5 @@
 ﻿<template>
     <h1 class="st-title">Login to Salesforce</h1>
-
     <div class="st-float">
         <p class="st-text">We now need to set up a connection to Salesforce in order to pull data.</p>
     </div>
@@ -15,13 +14,14 @@
         <input class="st-input" type="password" placeholder="password" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="salesforcePassword" />
     </div>
 
-    <div>
+    <div class ="st-float">
         <p class="st-text">Salesforce Online URL:</p>
         <select class="btn btn-default dropdown-toggle st-input" value.bind="salesforceUrl">
             <option>https://login.salesforce.com/</option>
             <option>https://test.salesforce.com/</option>
         </select>
     </div>
+
     <div class="st-float">
         <p class="st-text">Salesforce Token:</p>
         <input class="st-input" type="text" placeholder="token" change.delegate="Invalidate()" disabled.bind="MS.HttpService.isServiceBusy" value.bind="salesforceToken" />

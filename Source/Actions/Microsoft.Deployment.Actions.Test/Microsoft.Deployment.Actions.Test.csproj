@@ -84,6 +84,7 @@
     <Compile Include="ActionsTest\AzureCommonTests.cs" />
     <Compile Include="ActionsTest\CDMTests.cs" />
     <Compile Include="ActionsTest\OnPremiseTests.cs" />
+    <Compile Include="ActionsTest\SalesforceActionTests.cs" />
     <Compile Include="ActionsTest\TestActions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\SalesforceSOAP\Reference.cs">
@@ -539,6 +540,12 @@
     <WCFMetadataStorage Include="Service References\SalesforceSOAP\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Apps\TestApps\TestApp\Service\Database\Cleanup\00 content check.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Apps\TestApps\TestApp\Service\Database\Cleanup\10 pre.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Apps\TestApps\TestApp\Service\Resources\Scripts\testScript.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
