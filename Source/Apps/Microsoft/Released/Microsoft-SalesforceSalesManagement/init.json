@@ -2,7 +2,7 @@
   "Install": {
     "Pages": [
       {
-        "name": "$SiteCommon$/pagesgallery/gettingstarted.html",
+        "name": "$SiteCommon$/pagesgallery/getting-started.html",
         "displayname": "Getting Started",
         "architectureDiagram": "dist/Apps/Microsoft/Released/Microsoft-SalesforceSalesManagement/Web/Images/salesforceArchitectureDiagram.png",
         "features": [
@@ -107,7 +107,7 @@
   "Uninstall": {
     "Pages": [
       {
-        "name": "$SiteCommon$/pagesgallery/gettingstarted.html",
+        "name": "$SiteCommon$/pagesgallery/getting-started.html",
         "displayname": "Uninstall Start"
       },
       {
