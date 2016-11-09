@@ -22,7 +22,10 @@ namespace Microsoft.Deployment.Actions.Test
             AppFactory factory = new AppFactory();
             CommonControllerModel model = new CommonControllerModel()
             {
-                AppFactory = factory
+                AppFactory = factory,
+                AppRootFilePath = factory.AppPath,
+                SiteCommonFilePath = factory.SiteCommonPath,
+                ServiceRootFilePath = factory.SiteCommonPath + "../"
             };
 
             Controller = new CommonController(model);

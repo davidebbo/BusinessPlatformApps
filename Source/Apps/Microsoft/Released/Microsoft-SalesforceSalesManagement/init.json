@@ -55,7 +55,8 @@
         "name": "$SiteCommon$/pagesgallery/progress.html",
         "displayname": "Progress",
         "finishedActionName": "Microsoft-ADFSliceStatus",
-        "targetSchema": "dbo"
+        "targetSchema": "dbo",
+        "filename": "$('SalesManagementReport.pbix', isSaved=true)"
       }
     ],
     "Actions": [
