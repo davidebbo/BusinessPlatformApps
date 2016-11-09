@@ -171,7 +171,7 @@
       {
         "name": "Microsoft-RemoveTask",
         "displayname": "Remove task",
-        "TaskName": "Test Task Name"
+        "TaskName": "Power BI Solution Template - SCCM"
       },
       {
         "name": "Microsoft-RemoveFiles",
