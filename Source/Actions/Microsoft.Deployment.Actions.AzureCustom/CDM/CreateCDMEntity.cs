@@ -49,7 +49,6 @@ namespace Microsoft.Deployment.Actions.AzureCustom.CDM
 
             var response = await client.ExecuteGenericRequestWithHeaderAsync(HttpMethod.Put, $"https://management.azure.com/providers/Microsoft.CommonDataModel/environments/{environId}/namespaces/{namespaceID}/entities/{entityName}_?api-version=2016-11-01", cdmEntity);
             var responseString = await response.Content.ReadAsStringAsync();
-            var responseParsed = JsonUtility.GetJsonObjectFromJsonString(responseString);
 
 
             return new ActionResponse(ActionStatus.Success);

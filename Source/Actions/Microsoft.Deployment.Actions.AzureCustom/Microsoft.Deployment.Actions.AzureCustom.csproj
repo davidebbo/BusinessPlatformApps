@@ -152,7 +152,6 @@
     <Compile Include="CDM\GetEnvironID.cs" />
     <Compile Include="CDM\GetObjID.cs" />
     <Compile Include="CDM\ProvisionCDM.cs" />
-    <Compile Include="CDM\ValidateCDMEntity.cs" />
     <Compile Include="Common\CheckAzureWebsiteExists.cs" />
     <Compile Include="Common\CreateResourceGroup.cs" />
     <Compile Include="Common\DeleteResourceGroup.cs" />

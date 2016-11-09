@@ -82,7 +82,7 @@ namespace Microsoft.Deployment.Actions.Test.ActionsTest
             var responseBody = JObject.FromObject(result.Body);
 
             dataStore.AddToDataStore("EnvironmentID", "Legacy-1806a3cb-4a99-4491-aa5f-ac186fd73f10", DataStoreType.Private);
-            dataStore.AddToDataStore("ObjectID", "63439178-643b-4b6d-92ed-db2e1f2f5b14", DataStoreType.Private);
+            //dataStore.AddToDataStore("ObjectID", "63439178-643b-4b6d-92ed-db2e1f2f5b14", DataStoreType.Private);
             dataStore.AddToDataStore("EntityName", "TestEntity", DataStoreType.Private);
 
             var getCDMEntityResponse = TestHarness.ExecuteAction("Microsoft-CheckCDMEntities", dataStore);
@@ -99,13 +99,29 @@ namespace Microsoft.Deployment.Actions.Test.ActionsTest
             var responseBody = JObject.FromObject(result.Body);
 
             dataStore.AddToDataStore("EnvironmentID", "Legacy-1806a3cb-4a99-4491-aa5f-ac186fd73f10", DataStoreType.Private);
-            dataStore.AddToDataStore("ObjectID", "63439178-643b-4b6d-92ed-db2e1f2f5b14", DataStoreType.Private);
-            dataStore.AddToDataStore("EntityName", "TestEntity15", DataStoreType.Private);
+            dataStore.AddToDataStore("EntityName", "TestEntity20", DataStoreType.Private);
 
             var CreateCDMEntity = TestHarness.ExecuteAction("Microsoft-CreateCDMEntity", dataStore);
 
             Assert.IsTrue(CreateCDMEntity.Status == ActionStatus.Success);
         }
+
+        //[TestMethod]
+        //public async Task ValidateCDMEntity()
+        //{
+        //    //Get Token
+        //    var dataStore = await AAD.GetUserTokenFromPopup();
+        //    var result = await TestHarness.ExecuteActionAsync("Microsoft-GetAzureSubscriptions", dataStore);
+        //    Assert.IsTrue(result.IsSuccess);
+        //    var responseBody = JObject.FromObject(result.Body);
+
+        //    dataStore.AddToDataStore("EnvironmentID", "Legacy-1806a3cb-4a99-4491-aa5f-ac186fd73f10", DataStoreType.Private);
+        //    dataStore.AddToDataStore("EntityName", "TestEntity", DataStoreType.Private);
+
+        //    var validateCDMEntityResponse = TestHarness.ExecuteAction("Microsoft-ValidateCDMEntity", dataStore);
+
+        //    Assert.IsTrue(validateCDMEntityResponse.Status == ActionStatus.Success);
+        //}
 
         //[TestMethod]
         //public async Task GetObjID()
