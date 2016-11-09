@@ -52,7 +52,7 @@ namespace Microsoft.Deployment.Common.Actions.MsCrm
             {
                 found = v.Name.EqualsIgnoreCase(vaultName);
                 if (!found) continue;
-                vault = (Vault) v;
+                vault = (Vault)v;
                 break;
             }
 
@@ -66,9 +66,7 @@ namespace Microsoft.Deployment.Common.Actions.MsCrm
             KeyVaultClient kvClient = new KeyVaultClient(GetAccessToken);
             var secret = kvClient.SetSecretAsync(vault.Properties.VaultUri, secretName, connectionString, new Dictionary<string, string>() {{organizationId, tenantId}},
                                                  null, new SecretAttributes() {Enabled = true}).GetAwaiter().GetResult();
-            
-
-            return new ActionResponse(ActionStatus.Success, JsonUtility.GetEmptyJObject());
+            return new ActionResponse(ActionStatus.Success, secret.Id, true);
         }
     }
 }
