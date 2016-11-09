@@ -24,7 +24,7 @@ namespace Microsoft.Deployment.Actions.Salesforce
             string schema = "dbo";
             string connString = request.DataStore.GetValue("SqlConnectionString");
 
-            string objectMetadata = request.DataStore.GetValue("Objects").ToString();
+            var objectMetadata = request.DataStore.GetValue("Objects");
             List<DescribeSObjectResult> metadataList = JsonConvert.DeserializeObject(objectMetadata, typeof(List<DescribeSObjectResult>)) as List<DescribeSObjectResult>;
             List<Tuple<string, List<ADFField>>> adfFields = new List<Tuple<string, List<ADFField>>>();
 
@@ -42,7 +42,7 @@ namespace Microsoft.Deployment.Actions.Salesforce
             resp.ADFPipelineJsonData = new ExpandoObject();
             resp.ADFPipelineJsonData.fields = adfFields;
 
-            return new ActionResponse(ActionStatus.Success, resp);
+            return new ActionResponse(ActionStatus.Success, JsonUtility.GetJObjectFromObject(resp));
         }
 
         public List<ADFField> ExtractSimpleMetadata(DescribeSObjectResult sfobject)

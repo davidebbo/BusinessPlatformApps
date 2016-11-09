@@ -56,8 +56,8 @@
       <HintPath>..\packages\Microsoft.Azure.Management.Resources.2.20.1-preview\lib\net40\Microsoft.Azure.ResourceManager.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Deployment.Common, Version=1.0.6155.3823, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Deployment.Common.1.3.3-dev201611070203\lib\net452\Microsoft.Deployment.Common.dll</HintPath>
+    <Reference Include="Microsoft.Deployment.Common, Version=1.0.6156.35068, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Deployment.Common.1.4.0-CI23\lib\net452\Microsoft.Deployment.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -465,12 +465,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\SalesforceSOAP\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Microsoft.Deployment.Actions.Common\Microsoft.Deployment.Actions.Common.csproj">
-      <Project>{4e627186-0cb1-4ade-8b17-9513b690a854}</Project>
-      <Name>Microsoft.Deployment.Actions.Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

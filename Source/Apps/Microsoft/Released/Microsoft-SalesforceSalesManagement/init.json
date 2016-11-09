@@ -2,7 +2,7 @@
   "Install": {
     "Pages": [
       {
-        "name": "$SiteCommon$/pagesgallery/gettingstarted.html",
+        "name": "$SiteCommon$/pagesgallery/getting-started.html",
         "displayname": "Getting Started",
         "architectureDiagram": "dist/Apps/Microsoft/Released/Microsoft-SalesforceSalesManagement/Web/Images/salesforceArchitectureDiagram.png",
         "features": [
@@ -15,7 +15,7 @@
         "name": "$SiteCommon$/pagesgallery/azure-login.html",
         "displayname": "Login",
         "pricingUrl": "SalesforcePricingURL",
-        "pricingCost": "$('By deploying the template you authorize the creation of Azure resources on your subscription. The base cost of these services is approximately $1.5 a day. The cost will vary with the amount of data that will be moved.')"
+        "pricingCost": "$('By deploying the template you authorize the creation of Azure resources on your subscription. The base cost of these services is approximately $1.50 a day. The cost will vary with the amount of data that will be moved.')"
       },
       {
         "name": "$SiteCommon$/pagesgallery/salesforce-login.html",
@@ -26,24 +26,37 @@
         "name": "$SiteCommon$/pagesgallery/sql-server.html",
         "displayname": "Target",
         "isAzureSql": true,
-        "showAzureSql": true,
+        "showAzureSql": false,
         "showNewSqlOption": true,
         "subtitle": "Set up a connection to SQL so we can bring in your Salesforce data.",
         "title": "Connect to your SQL Database",
-        "sqlInstance": "SalesforceDB",
-        "newSqlDatabase": "$(this.MS.UtilityService.GetUniqueId(10))"
+        "sqlInstance": "SalesforceDB"
       },
-      //{
-      //  "name": "customize.html",
-      //  "displayname": "Customize"
-      //},
+      {
+        "name": "customize.html",
+        "displayname": "Customize"
+      },
       {
         "name": "$SiteCommon$/pagesgallery/summary.html",
-        "displayname": "Summary"
+        "displayname": "Summary",
+        "values": {
+          "Subscription": "$(this.MS.DataStore.getJson(\"SelectedSubscription\").SubscriptionId)",
+          "ResourceGroup": "$(this.MS.DataStore.getValue(\"SelectedResourceGroup\"))",
+          "SqlServer": "$(this.MS.DataStore.getJson(\"SqlCredentials\").Server)",
+          "Database": "$(this.MS.DataStore.getJson(\"SqlCredentials\").Database)",
+          "FiscalStart": "$(this.MS.DataStore.getValue(\"fiscalMonth\"))",
+          "Emails": "$(this.MS.DataStore.getValue(\"EmailAddresses\"))",
+          "Actuals": "$(this.MS.DataStore.getValue(\"actuals\"))",
+          "PipelineFrequency": "$(this.MS.DataStore.getValue(\"postDeploymentPipelineFrequency\"))",
+          "PipelineInterval": "$(this.MS.DataStore.getValue(\"postDeploymentPipelineInterval\"))"
+        }
       },
       {
         "name": "$SiteCommon$/pagesgallery/progress.html",
-        "displayname": "Progress"
+        "displayname": "Progress",
+        "finishedActionName": "Microsoft-ADFSliceStatus",
+        "targetSchema": "dbo",
+        "filename": "$('SalesManagementReport.pbix', isSaved=true)"
       }
     ],
     "Actions": [
@@ -107,7 +120,7 @@
   "Uninstall": {
     "Pages": [
       {
-        "name": "$SiteCommon$/pagesgallery/gettingstarted.html",
+        "name": "$SiteCommon$/pagesgallery/getting-started.html",
         "displayname": "Uninstall Start"
       },
       {

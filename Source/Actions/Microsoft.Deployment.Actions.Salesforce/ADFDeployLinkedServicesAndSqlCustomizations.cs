@@ -61,8 +61,8 @@ namespace Microsoft.Deployment.Actions.Salesforce
             param.AddParameter("salesforcePassword", "securestring", sfPassword);
             param.AddParameter("sqlServerPassword", "securestring", sqlCreds.Password);
             param.AddParameter("salesforceSecurityToken", "securestring", sfToken);
-
-            var armTemplate = JsonUtility.GetJsonObjectFromJsonString(System.IO.File.ReadAllText(Path.Combine(FileUtility.GetLocalTemplatePath(request.Info.AppName), "Service/ADF/linkedServices.json")));
+            
+            var armTemplate = JsonUtility.GetJsonObjectFromJsonString(System.IO.File.ReadAllText(Path.Combine(request.Info.App.AppFilePath, "Service/ADF/linkedServices.json")));
             var armParamTemplate = JsonUtility.GetJObjectFromObject(param.GetDynamicObject());
 
             armTemplate.Remove("parameters");

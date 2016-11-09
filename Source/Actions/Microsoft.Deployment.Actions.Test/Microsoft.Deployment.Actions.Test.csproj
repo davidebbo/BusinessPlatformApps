@@ -52,8 +52,8 @@
       <HintPath>..\packages\Microsoft.Data.Services.Client.5.8.0\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Deployment.Common, Version=1.0.6155.3823, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Deployment.Common.1.3.3-dev201611070203\lib\net452\Microsoft.Deployment.Common.dll</HintPath>
+    <Reference Include="Microsoft.Deployment.Common, Version=1.0.6156.35068, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Deployment.Common.1.4.0-CI23\lib\net452\Microsoft.Deployment.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=3.13.7.964, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -83,7 +83,9 @@
     </Compile>
     <Compile Include="ActionsTest\AzureCommonTests.cs" />
     <Compile Include="ActionsTest\CDMTests.cs" />
+    <Compile Include="ActionsTest\CommonTests.cs" />
     <Compile Include="ActionsTest\OnPremiseTests.cs" />
+    <Compile Include="ActionsTest\SalesforceTests.cs" />
     <Compile Include="ActionsTest\TestActions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\SalesforceSOAP\Reference.cs">
@@ -103,6 +105,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Apps\TestApps\TestApp\init.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Apps\TestApps\TestApp\Service\PowerBI\SCCMSolutionTemplate.pbix">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config">
@@ -542,6 +547,12 @@
     <WCFMetadataStorage Include="Service References\SalesforceSOAP\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Apps\TestApps\TestApp\Service\Database\Cleanup\00 content check.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Apps\TestApps\TestApp\Service\Database\Cleanup\10 pre.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Apps\TestApps\TestApp\Service\Resources\Scripts\testScript.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

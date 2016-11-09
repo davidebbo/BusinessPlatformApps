@@ -49,9 +49,7 @@ namespace Microsoft.Deployment.Actions.Salesforce
                 pipelineInterval = request.DataStore.GetValue("postDeploymentPipelineInterval");
             }
 
-            var adfJsonData = request.DataStore.GetValue("ADFPipelineJsonData");
-            adfJsonData = adfJsonData.Remove(0, 1);
-            adfJsonData = adfJsonData.Remove(adfJsonData.Length - 1, 1);
+            string adfJsonData = request.DataStore.GetValue("ADFPipelineJsonData");
             var sqlCreds = SqlUtility.GetSqlCredentialsFromConnectionString(connString);
 
             var obj = JsonConvert.DeserializeObject(adfJsonData, typeof(DeserializedADFPayload)) as DeserializedADFPayload;
@@ -81,7 +79,7 @@ namespace Microsoft.Deployment.Actions.Salesforce
                 datasetParam.AddParameter("sqlServerPassword", "securestring", sqlCreds.Password);
                 datasetParam.AddParameter("salesforceSecurityToken", "securestring", sfToken);
 
-                var armTemplate = JsonUtility.GetJsonObjectFromJsonString(System.IO.File.ReadAllText(Path.Combine(FileUtility.GetLocalTemplatePath(request.Info.AppName), "Service/ADF/datasets.json")));
+                var armTemplate = JsonUtility.GetJsonObjectFromJsonString(System.IO.File.ReadAllText(Path.Combine(request.Info.App.AppFilePath, "Service/ADF/datasets.json")));
                 var armParamTemplate = JsonUtility.GetJObjectFromObject(datasetParam.GetDynamicObject());
 
                 armTemplate.Remove("parameters");
